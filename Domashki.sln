@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calc", "Domashki\Domashki.v
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{A879275C-9A86-4CFC-A982-A0C766493A0F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calc_ingeneer", "Calc_ingeneer\Calc_ingeneer.vcxproj", "{C2213905-05E7-411A-9930-2255F0CC4011}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{A879275C-9A86-4CFC-A982-A0C766493A0F}.Release|x64.Build.0 = Release|x64
 		{A879275C-9A86-4CFC-A982-A0C766493A0F}.Release|x86.ActiveCfg = Release|Win32
 		{A879275C-9A86-4CFC-A982-A0C766493A0F}.Release|x86.Build.0 = Release|Win32
+		{C2213905-05E7-411A-9930-2255F0CC4011}.Debug|x64.ActiveCfg = Debug|x64
+		{C2213905-05E7-411A-9930-2255F0CC4011}.Debug|x64.Build.0 = Debug|x64
+		{C2213905-05E7-411A-9930-2255F0CC4011}.Debug|x86.ActiveCfg = Debug|Win32
+		{C2213905-05E7-411A-9930-2255F0CC4011}.Debug|x86.Build.0 = Debug|Win32
+		{C2213905-05E7-411A-9930-2255F0CC4011}.Release|x64.ActiveCfg = Release|x64
+		{C2213905-05E7-411A-9930-2255F0CC4011}.Release|x64.Build.0 = Release|x64
+		{C2213905-05E7-411A-9930-2255F0CC4011}.Release|x86.ActiveCfg = Release|Win32
+		{C2213905-05E7-411A-9930-2255F0CC4011}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
