@@ -19,6 +19,7 @@ int main()
 		cin >> num1;
 		cin >> oper;
 		cin >> num2;
+
 		switch (oper)
 
 		{
