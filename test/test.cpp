@@ -3,13 +3,6 @@
 using namespace std;
 int main()
 {
-	char key;
-	do
-	{
+	int stepen;
 
-		key = _getch();
-		cout << (int)key;
-	}
-
-	while (key != 27);
 }
