@@ -3,6 +3,12 @@
 using namespace std;
 int main()
 {
-	int stepen;
+	char key;
+	int  i = 1;
+	do {
+		key = i;
+		cout << key << " ";
+		i++;
+	} while (key);
 
 }
