@@ -1,65 +1,88 @@
 #include <iostream>
-#include<conio.h>
 using namespace std;
-#define OFFSET "\t\t\t\t"
+
+double number()
+{
+    double res = 0;
+    for (;;)
+    {
+        char c = cin.get();
+        if (c >= '0' && c <= '9')
+            //res = res * 10 + c - '0';
+            res = res + c - '0';
+        else
+        {
+            cin.putback(c);
+            return res;
+        }
+    }
+}
+
+double expr();
+
+double skobki()
+{
+    char c = cin.get();
+    if (c == '(')
+    {
+        double x = expr();
+        cin.get();
+        return x;
+    }
+    else
+    {
+        cin.putback(c);
+        return number();
+    }
+}
+
+float factor()
+{
+    double x = skobki();
+    for (;;)
+    {
+        char c = cin.get();
+        switch (c)
+        {
+        case '*':
+            x *= skobki();
+            break;
+        case '/':
+            x /= skobki();
+            break;
+        default:
+            cin.putback(c);
+            return x;
+        }
+    }
+}
+
+double expr()
+{
+    double x = factor();
+    for (;;)
+    {
+        char c = cin.get();
+        switch (c)
+        {
+        case '+':
+            x += factor();
+            break;
+        case '-':
+            x -= factor();
+            break;
+        default:
+            cin.putback(c);
+            return x;
+        }
+    }
+}
+
+
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	char key; // код клавиши
-	char oper; // оперетор 
-	double num1 = 0.0, num2 = 0.0; // Вводимые числа
-
-	cout << OFFSET << "=============================================\n\n";
-	cout << OFFSET << " ПРОСТОЙ КАЛЬКУЛЯТОР (Милькин Сергей СБУ_223)\n\n";
-	cout << OFFSET << "=============================================\n\n";
-	cout << "\t\t\t\t\t" << "  Введите выражение и нажмите Enter\n";
-	cout << "\t\t\t\t\t" << " Для выхода из программы нажмите Esc\n\n";
-	do
-	{
-	
-		char c = cin.get();
-			switch (key)
-
-
-			{
-			case '+':
-				cout << "--------------------------------------------\n";
-				cout << num1 << "+" << num2 << "=" << num1 + num2 << endl;
-				cout << "--------------------------------------------\n";
-				break;
-
-			case '-':
-				cout << "--------------------------------------------\n";
-				cout << num1 << "-" << num2 << "=" << num1 - num2 << endl;
-				cout << "--------------------------------------------\n";
-				break;
-
-			case '*':
-				cout << "--------------------------------------------\n";
-				cout << num1 << "*" << num2 << "=" << num1 * num2 << endl;
-				cout << "--------------------------------------------\n";
-				break;
-
-			case '/':
-				if (num2 != 0)
-				{
-					cout << "--------------------------------------------\n";
-					cout << num1 << ":" << num2 << "=" << num1 / num2 << endl;
-					cout << "--------------------------------------------\n";
-				}
-				else
-					cout << "Делить на 0 нельзя!";
-
-				break;
-
-			default:
-				cout << "Неизвестный оператор";
-				break;
-
-
-
-
-	} while (key != 27);
-	// со второго выражения пропускает первую клавишу, уточнить 
-
+    setlocale(LC_ALL, "Russian");
+    cout << "Введите выражение: ";
+    double res = expr();
+    cout << "Результат: " << res << endl;
 }
