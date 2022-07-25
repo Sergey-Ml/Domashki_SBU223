@@ -247,14 +247,20 @@ int main()
 				cout << OFFSET << "==============================================================\n\n";
 
 				for (int i = 1; i <= 9; i++)
-				cout << "    " << i << "\t";
-					cout << endl;
+				{
+					if (i < 10) cout << " ";
+					cout << "     " << i << "\t";
+				}	cout << endl;
 				
 					for (int i = 2; i <= 9; i++)
 					{
 						for (int j = 1; j <= 9; j++)
-						
-							cout << "    " << i * j << "\t" ;
+						{
+							if (i * j < 100) cout << " ";
+							if (i * j < 10) cout << " ";
+
+							cout << "    " << i * j << "\t";
+						}
 							cout << endl;
 						
 					}
