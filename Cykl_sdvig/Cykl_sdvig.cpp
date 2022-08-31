@@ -8,16 +8,17 @@ int main()
 	cout << OFFSET << "===============================================================\n\n";
 	cout << OFFSET << "                Выполнить циклический сдвиг  \n\n";
 	cout << OFFSET << "===============================================================\n\n";
-	cout << OFFSET << "     Введите размер массива (не более 100 элементов): \n";
+	cout << OFFSET << "     Введите размер массива (не более 100 элементов):  ";
 	int razm;
 	cin >> razm;
-	cout << endl;
+
 
 	while (razm > 100 || razm <= 0)
 	{
-		cout << " Размер массива может быть от 1 до 100! " << endl;
+		cout << " Размер массива может быть от 1 до 100! ";
 		cout << " Введите снова: ";
 		cin >> razm;
+		cout << endl;
 	}
 	const int size = 100;
 	float array[size] = { 0 };
@@ -31,7 +32,7 @@ int main()
 	int sdvig_l;
 	cin >> sdvig_l;
 
-	cout << " Введите число сдвига вправо:  ";
+	cout << setw(10) << " Введите число сдвига вправо:  ";
 	int sdvig_p;
 	cin >> sdvig_p;
 
@@ -49,7 +50,7 @@ int main()
 	for (int j = 1; j <= sdvig_l; j++)
 	{
 		float temp = array[0];
-		for (int i = 0; i < razm; i++)
+		for (int i = 0; i < razm - 1; i++)
 		{
 			array[i] = array[i + 1];
 		}
@@ -59,19 +60,10 @@ int main()
 	{
 		cout << array[i] << " ";
 	}
-	cout <<endl; 
+	cout << endl;
 	cout << setw(30) << " Циклический сдвиг вправо: ";
 
-	for (int j = 1; j <= sdvig_l; j++)
-	{
-		float temp = array[razm-1];
-		for (int i = razm-1; i >=0; i--)
-		{
-			array[i+1] = array[i];
-		}
-		array[0] = temp;
-	}
-	for (int j = 1; j <= sdvig_p; j++)
+	for (int j = 1; j <= sdvig_p + sdvig_l; j++)
 	{
 		float temp = array[razm - 1];
 		for (int i = razm - 1; i >= 0; i--)
