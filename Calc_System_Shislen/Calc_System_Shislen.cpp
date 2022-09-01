@@ -19,7 +19,7 @@ int main()
 		cout << OFFSET << "===============================================================\n\n";
 		cout << OFFSET << "1.   Перевод из десятичной в двоичную (10 --> 1010)\n\n";
 		cout << OFFSET << "2.   Перевод из десятичной в шестнадцатиричную (10 --> 0xA)\n\n";
-		//cout << OFFSET << "3.   Перевод из двоичной в десятичную (1010 --> 10)\n\n";
+		cout << OFFSET << "3.   Перевод из двоичной в десятичную (1010 --> 10)\n\n";
 		//cout << OFFSET << "4.   Перевод из шестнадцатиричной в десятичную (0xA --> 10)\n\n";
 		cout << OFFSET << "Esc. Выход\n\n";
 		cout << OFFSET << "===============================================================\n\n";
@@ -34,14 +34,14 @@ int main()
 				break;
 			}
 			{
-				cout << OFFSET << "     Введите десятичное число:  ";
+				cout << OFFSET << " Введите десятичное число:  ";
 
 				int vvod, temp, j = 0, array[10];
 				cin >> vvod;
 				temp = vvod;
-				cout << OFFSET << " Число " << temp << " в двоичной системе :  ";
+				cout << OFFSET << " Десятичное число " << temp << " в двоичной системе будет:  ";
 
-
+				// делим на основание до нуля и загоняем в массив остатки от деления
 				do {
 					array[j++] = temp % 2;
 					temp /= 2;
@@ -64,12 +64,14 @@ int main()
 				break;
 			}
 			{
-				cout << OFFSET << "     Введите десятичное число:  ";
+				cout << OFFSET << " Введите десятичное число:  ";
 
 				int vvod, temp, _16, j = 0, array[10];
 				cin >> vvod;
 				temp = vvod;
-				cout << OFFSET << " Число " << temp << " в шестнадцатиричной  системе :  " << "0x";
+				cout << OFFSET << " Десятичное число " << temp << " в шестнадцатиричной  системе будет:  " << "0x";
+
+				// все тоже самое, только меняем в массиве цифры на буквы  
 				do {
 					array[j++] = temp % 16;
 					temp /= 16;
@@ -92,10 +94,63 @@ int main()
 
 				cout << endl;
 			}
-
-
 		}
-		key = _getch();
-	} while (key != 27);
+			// Задача 3
+			if (otvet == 3)
+			{
+				if (otvet == 27 - 48)
+				{
+					cout << "Выход" << endl;
+					break;
+				}
+				{
+					cout << OFFSET << " Введите двоичное число:  ";
 
-}
+					int vvod, temp, razr = 0, j = 0, array[10], sum = 0, result = 1, exp;
+					cin >> vvod;
+					temp = vvod;
+					cout <<OFFSET<< " Двоичное число " << temp << " в десятичной системе будет :  ";
+					//кол-во разрядов во введенном числе
+					while (vvod != 0)
+					{
+						vvod /= 10;
+						++razr;
+					}
+					//cout << razr << "|";
+
+					//cout << endl;
+					// загоняем введенное число в массив
+					do
+					{
+						array[j++] = temp % 10;
+						temp /= 10;
+
+					} while (temp != 0);
+
+					exp = razr - 1;
+
+					for (int i = j - 1; i >= 0; i--)
+					{
+						result = pow(2, exp);
+						--exp;
+						array[i] *= result;
+						//cout << array[i] << " + ";
+					}
+
+					//cout << endl;
+
+					for (int i = 0; i < razr; i++)
+					{
+						sum += array[i];
+
+					}
+
+					cout << sum << endl;
+				}
+			
+			}
+			key = _getch();
+		} while (key != 27);
+	}
+
+	
