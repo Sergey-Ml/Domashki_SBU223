@@ -1,40 +1,25 @@
 #include<iostream>
-#include <conio.h>
-//#define While
-#//define While2
-#define Escape 27
+#include<string>
+#include<algorithm>
 using namespace std;
+
 int main()
 {
     setlocale(LC_ALL, "Russian");
-#ifdef While
-    int i = 0;
-    int n;
-    cout << "Введите количество итераций: ";
-    cin >> n;
-    while (i<n)
+
+    string line;
+    cout << " Введите число: ";
+    cin >> line;
+    char A = 'A';
+    int B = 49;
+      for (int i = 0; i < line.size(); i++)
     {
-        cout << i <<"HelloWorld\n";
-        i++;
+        if (line[i] == A)
+        {
+
+            line[i] = B;
+        }
     }
-#endif While
-#ifdef While2
-    int n; // Кол-во итераций
-    cout << " Введите кол-во итераций: ";
-    cin >> n;
-    while (n--)
-    {
-        cout << n << " \t";
-    }
-    cout << endl;
-#endif // While2
-    char key; // переменная будет хранить код клавиши
-    do
-    {
-        key = _getch();
-        cout << (int)key << "\t" << key << endl;
-        (int)key;
-    } while (key != Escape);
-    
+    cout << line;
 }
 
