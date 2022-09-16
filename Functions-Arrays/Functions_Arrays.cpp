@@ -1,1 +1,30 @@
-///Сделаю к субботе, завален работой, не успеваю
+п»ї#include<iostream>
+#include<iomanip>
+using namespace std;
+#define OFFSET "\t\t\t\t"
+
+void repchar(char, int); // РѕС„РѕСЂРјР»РµРЅРёРµ
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << OFFSET << "========================================================\n\n";
+	cout << OFFSET << "             РџСЂРѕРµРєС‚ Function/Arrays \n\n  ";
+	cout << OFFSET << "========================================================\n\n\n";
+
+	repchar('-', 43);
+	cout << " РњР°СЃСЃРёРІ " << endl;
+	repchar('=', 23);
+	cout << " С‚РѕР¶Рµ С…Р· " << endl;
+	repchar('-', 43);
+
+}
+
+// --------------------------------------
+// С„-С†РёСЏ repchar
+void repchar(char simvol, int n)
+{
+	for (int i = 0; i < n; i++)
+		cout << simvol;
+	cout << endl;
+}
