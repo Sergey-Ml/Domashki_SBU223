@@ -15,7 +15,7 @@ void shiftLeft(int array[], int size, int sdvig);
 void shiftRight(int array[], int size, int sdvig);
 void SortMax(int array[], int size);
 void SortMin(int array[], int size);
-void UniqueRand(int array[], int size);
+void UniqueRand(int array[], int size, int minRand = 0, int maxRand = 100);
 
 
 int main()
@@ -81,7 +81,7 @@ int main()
 	Print(array, razm);
 	cout << endl;
 
-	UniqueRand(array, razm);
+	UniqueRand(array, razm, 10,100);
 	cout << setw(30) << " Уникальные числа:  ";
 	Print(array, razm);
 	cout << endl;
@@ -246,7 +246,7 @@ void SortMin(int array[], int size)
 //---------------------------------------
 // ф-ция Uniquerand
 
-void UniqueRand(int array[], int size)
+void UniqueRand(int array[], int size, int minRand, int maxRand)
 {
 	for (int i = 0; i < size; i++)
 	{
