@@ -5,17 +5,17 @@ using namespace std;
 
 void repchar (char, int); // оформление
 void FillRand (int array[], int size, int minRand=0, int maxRand=100);
-void Print (int array[], int size);
-void ReversePrint(int array[], int size);
-int Sum(int array[], int size);
-double Avg(int array[], int size);
-int minValueIn(int array[], int size);
-int maxValueIn(int array[], int size);
-void shiftLeft(int array[], int size, int sdvig);
-void shiftRight(int array[], int size, int sdvig);
-void SortMax(int array[], int size);
-void SortMin(int array[], int size);
-void UniqueRand(int array[], int size, int minRand = 0, int maxRand = 100);
+template<typename T> void Print (T array[], int size);
+template<typename T> void ReversePrint(T array[], int size);
+template <typename T> T Sum(T array[], int size);
+template<typename T> double Avg(T array[], int size);
+template<typename T> T minValueIn(T array[], int size);
+template<typename T> T maxValueIn(T array[], int size);
+template<typename T> void shiftLeft(T array[], int size, int sdvig);
+template<typename T> void shiftRight(T array[], int size, int sdvig);
+template<typename T> void SortMax(T array[], int size);
+template<typename T> void SortMin(T array[], int size);
+template<typename T> void UniqueRand(T array[], int size, int minRand = 0, int maxRand = 100);
 
 
 int main()
@@ -116,8 +116,7 @@ void FillRand(int array[], int size,int minRand, int maxRand)
 }
 //---------------------------------------
 // ф-ция Print
-
-void Print(int array[], int size)
+template <typename T> void Print(T array[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -128,8 +127,7 @@ void Print(int array[], int size)
 }
 //---------------------------------------
 // ф-ция ReversePrint
-
-void ReversePrint(int array[], int size)
+template <typename T> void ReversePrint(T array[], int size)
 {
 	for (int i = size-1; i >=0; i--)
 	{
@@ -140,10 +138,9 @@ void ReversePrint(int array[], int size)
 }
 //---------------------------------------
 // ф-ция Sum
-
-int Sum(int array[], int size)
+template <typename T> T Sum(T array[], int size)
 {
-	int summa = 0;
+	T summa = 0;
 	for (int i = 0; i < size; i++)
 	{
 		summa += array[i];
@@ -153,8 +150,7 @@ int Sum(int array[], int size)
 }
 //---------------------------------------
 // ф-ция Avg
-
-double Avg(int array[], int size)
+template<typename T> double Avg(T array[], int size)
 {
 	return (double)Sum(array, size) / size;
 }
@@ -162,9 +158,9 @@ double Avg(int array[], int size)
 //---------------------------------------
 // ф-ция minValueIn
 
-int minValueIn(int array[], int size)
+template<typename T> T minValueIn(T array[], int size)
 {
-	int min = array[0];
+	T min = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] < min)
@@ -175,9 +171,9 @@ int minValueIn(int array[], int size)
 //---------------------------------------
 // ф-ция maxValueIn
 
-int maxValueIn(int array[], int size)
+template<typename T> T maxValueIn(T array[], int size)
 {
-	int max = array[0];
+	T max = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] > max)
@@ -188,11 +184,11 @@ int maxValueIn(int array[], int size)
 //---------------------------------------
 // ф-ция shiftLeft
 
-void shiftLeft(int array[], int size, int sdvig)
+template<typename T> void shiftLeft(T array[], int size, int sdvig)
 {
 	for (int i = 0; i < sdvig; i++)
 	{
-		int temp = array[0];
+		T temp = array[0];
 		for (int i = 0; i < size; i++)
 		{
 			array[i] = array[i + 1];
@@ -202,15 +198,14 @@ void shiftLeft(int array[], int size, int sdvig)
 }
 //---------------------------------------
 // ф-ция shiftRight
-
-void shiftRight(int array[], int size, int sdvig)
+template<typename T> void shiftRight(T array[], int size, int sdvig)
 {
 	shiftLeft(array, size, size-sdvig);
 }
 //---------------------------------------
 // ф-ция SortMax
 
-void SortMax(int array[], int size)
+template<typename T> void SortMax(T array[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -218,7 +213,7 @@ void SortMax(int array[], int size)
 		{
 			if (array[j] < array[i])
 			{
-				int temp = array[i];
+				T temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -228,7 +223,7 @@ void SortMax(int array[], int size)
 //---------------------------------------
 // ф-ция SortMin
 
-void SortMin(int array[], int size)
+template<typename T> void SortMin(T array[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -236,7 +231,7 @@ void SortMin(int array[], int size)
 		{
 			if (array[j] > array[i])
 			{
-				int temp = array[i];
+				T temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -246,7 +241,7 @@ void SortMin(int array[], int size)
 //---------------------------------------
 // ф-ция Uniquerand
 
-void UniqueRand(int array[], int size, int minRand, int maxRand)
+template<typename T> void UniqueRand(T array[], int size, int minRand, int maxRand)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -269,4 +264,4 @@ void UniqueRand(int array[], int size, int minRand, int maxRand)
 		} while (!unique);
 	}
 }
-//при вводе парам по умолчанию - ошибка !!!
+
