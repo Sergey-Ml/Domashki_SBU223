@@ -9,8 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calc_ingeneer", "Calc_ingeneer\Calc_ingeneer.vcxproj", "{C2213905-05E7-411A-9930-2255F0CC4011}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test1", "test1\test1.vcxproj", "{81D61937-6DC1-4ABB-BA1E-F8DA67CF7822}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test2", "test2\test2.vcxproj", "{740B61E4-1D49-4164-BB1B-C809F6E3A163}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Palindrom_Bilet", "Palindrom_Bilet\Palindrom_Bilet.vcxproj", "{90266693-883D-402A-8C74-3120C9D41BE6}"
@@ -26,6 +24,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calc_System_Shislen", "Calc_System_Shislen\Calc_System_Shislen.vcxproj", "{5AC0BFCC-76FC-4C4D-9A55-CE47FE0C6E56}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions-Arrays", "Functions-Arrays\Functions-Arrays.vcxproj", "{A0123196-24F6-4F68-9427-155F3A89634C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointers", "Pointers\Pointers.vcxproj", "{34D2D56F-A74B-4EDE-8546-85B7A24345F0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test3", "test3\test3.vcxproj", "{5F56D48A-2821-4C5E-9403-0AC9143BA365}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,14 +61,6 @@ Global
 		{C2213905-05E7-411A-9930-2255F0CC4011}.Release|x64.Build.0 = Release|x64
 		{C2213905-05E7-411A-9930-2255F0CC4011}.Release|x86.ActiveCfg = Release|Win32
 		{C2213905-05E7-411A-9930-2255F0CC4011}.Release|x86.Build.0 = Release|Win32
-		{81D61937-6DC1-4ABB-BA1E-F8DA67CF7822}.Debug|x64.ActiveCfg = Debug|x64
-		{81D61937-6DC1-4ABB-BA1E-F8DA67CF7822}.Debug|x64.Build.0 = Debug|x64
-		{81D61937-6DC1-4ABB-BA1E-F8DA67CF7822}.Debug|x86.ActiveCfg = Debug|Win32
-		{81D61937-6DC1-4ABB-BA1E-F8DA67CF7822}.Debug|x86.Build.0 = Debug|Win32
-		{81D61937-6DC1-4ABB-BA1E-F8DA67CF7822}.Release|x64.ActiveCfg = Release|x64
-		{81D61937-6DC1-4ABB-BA1E-F8DA67CF7822}.Release|x64.Build.0 = Release|x64
-		{81D61937-6DC1-4ABB-BA1E-F8DA67CF7822}.Release|x86.ActiveCfg = Release|Win32
-		{81D61937-6DC1-4ABB-BA1E-F8DA67CF7822}.Release|x86.Build.0 = Release|Win32
 		{740B61E4-1D49-4164-BB1B-C809F6E3A163}.Debug|x64.ActiveCfg = Debug|x64
 		{740B61E4-1D49-4164-BB1B-C809F6E3A163}.Debug|x64.Build.0 = Debug|x64
 		{740B61E4-1D49-4164-BB1B-C809F6E3A163}.Debug|x86.ActiveCfg = Debug|Win32
@@ -131,6 +125,22 @@ Global
 		{A0123196-24F6-4F68-9427-155F3A89634C}.Release|x64.Build.0 = Release|x64
 		{A0123196-24F6-4F68-9427-155F3A89634C}.Release|x86.ActiveCfg = Release|Win32
 		{A0123196-24F6-4F68-9427-155F3A89634C}.Release|x86.Build.0 = Release|Win32
+		{34D2D56F-A74B-4EDE-8546-85B7A24345F0}.Debug|x64.ActiveCfg = Debug|x64
+		{34D2D56F-A74B-4EDE-8546-85B7A24345F0}.Debug|x64.Build.0 = Debug|x64
+		{34D2D56F-A74B-4EDE-8546-85B7A24345F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{34D2D56F-A74B-4EDE-8546-85B7A24345F0}.Debug|x86.Build.0 = Debug|Win32
+		{34D2D56F-A74B-4EDE-8546-85B7A24345F0}.Release|x64.ActiveCfg = Release|x64
+		{34D2D56F-A74B-4EDE-8546-85B7A24345F0}.Release|x64.Build.0 = Release|x64
+		{34D2D56F-A74B-4EDE-8546-85B7A24345F0}.Release|x86.ActiveCfg = Release|Win32
+		{34D2D56F-A74B-4EDE-8546-85B7A24345F0}.Release|x86.Build.0 = Release|Win32
+		{5F56D48A-2821-4C5E-9403-0AC9143BA365}.Debug|x64.ActiveCfg = Debug|x64
+		{5F56D48A-2821-4C5E-9403-0AC9143BA365}.Debug|x64.Build.0 = Debug|x64
+		{5F56D48A-2821-4C5E-9403-0AC9143BA365}.Debug|x86.ActiveCfg = Debug|Win32
+		{5F56D48A-2821-4C5E-9403-0AC9143BA365}.Debug|x86.Build.0 = Debug|Win32
+		{5F56D48A-2821-4C5E-9403-0AC9143BA365}.Release|x64.ActiveCfg = Release|x64
+		{5F56D48A-2821-4C5E-9403-0AC9143BA365}.Release|x64.Build.0 = Release|x64
+		{5F56D48A-2821-4C5E-9403-0AC9143BA365}.Release|x86.ActiveCfg = Release|Win32
+		{5F56D48A-2821-4C5E-9403-0AC9143BA365}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

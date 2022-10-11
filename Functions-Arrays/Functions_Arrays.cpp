@@ -4,7 +4,7 @@ using namespace std;
 #define OFFSET "\t\t\t\t"
 
 void repchar (char, int); // оформление
-void FillRand (int array[], int size, int minRand=0, int maxRand=100);
+void FillRand (int array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void Print (int array[], int size);
 void ReversePrint(int array[], int size);
 int Sum(int array[], int size);
@@ -15,17 +15,18 @@ void shiftLeft(int array[], int size, int sdvig);
 void shiftRight(int array[], int size, int sdvig);
 void SortMax(int array[], int size);
 void SortMin(int array[], int size);
-void UniqueRand(int array[], int size, int minRand = 0, int maxRand = 100);
-
+void UniqueRand(int array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
+void Search(int array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	cout << OFFSET << "========================================================\n\n";
 	cout << OFFSET << "             Проект Function/Arrays \n\n  ";
+	cout << OFFSET << "           Работа со случайными числами \n\n  ";
 	cout << OFFSET << "========================================================\n\n\n";
 
-	cout << " Введите размер массива (не больше 100):  ";
+	cout << "  Введите размер массива (не больше 100):  ";
 	int razm;
 	cin >> razm;
 	cout << endl;
@@ -38,7 +39,16 @@ int main()
 	const int size = 100;
 	int array[size];
 	
-	FillRand(array, razm, 100, 110);
+	int minRand_Fill, maxRand_Fill;
+	cout << setw(30) << "Введите диапазон массива из " << razm << " элементов для случайных чисел от : ";
+	cin >> minRand_Fill;
+	cout << endl;
+	cout << setw(30) << "Введите диапазон массива из " << razm << " элементов для случайных чисел до: ";
+	cin >> maxRand_Fill;
+	
+	FillRand(array, razm, minRand_Fill, maxRand_Fill);
+
+
 
 	repchar('=', 88);
 	cout << setw(30)<< " Cформированный массив: ";
@@ -57,12 +67,12 @@ int main()
 	cout << endl;
 
 	SortMax(array, razm);
-	cout << setw(30) << " Сортировка по возрастанию:  ";
+	cout << setw(30) << "Сортировка по возрастанию: ";
 	Print(array, razm);
 	cout << endl;
 
 	SortMin(array, razm);
-	cout << setw(30) << " Сортировка по убыванию:  ";
+	cout << setw(30) << "Сортировка по убыванию: ";
 	Print(array, razm);
 	cout << endl;
 
@@ -81,16 +91,62 @@ int main()
 	Print(array, razm);
 	cout << endl;
 
-	UniqueRand(array, razm, 10,100);
-	cout << setw(30) << " Уникальные числа:  ";
-	Print(array, razm);
+	//repchar('=', 88);
+
+	cout << OFFSET << "========================================================\n\n";
+	cout << OFFSET << "               Функция Uniquerand \n\n  ";
+	cout << OFFSET << "           Работа с уникальными числами \n\n  ";
+	cout << OFFSET << "========================================================\n\n\n";
+
+
+	int minRand_Unique, maxRand_Unique;
+	cout << setw(30) << "Введите диапазон для формирования массива из " << razm << " элементов уникальными числами ОТ: ";
+	cin >> minRand_Unique;
+	cout << setw(30) << "Введите диапазон для формирования массива из " << razm << " элементов уникальными числами ДО: ";
+	cin >> maxRand_Unique;
 	cout << endl;
 
-	repchar('=', 88);
+	UniqueRand(array, razm, minRand_Unique, maxRand_Unique);
+	cout << setw(30) << "Сформированный массив из уникальных чисел: ";
+	Print(array, razm);
+	cout << endl;
 	
+
+	cout << OFFSET << "========================================================\n\n";
+	cout << OFFSET << "               Функция Search \n\n  ";
+	cout << OFFSET << "           Работа с повторяющимися числами \n\n  ";
+	cout << OFFSET << "========================================================\n\n\n";
+	int minRand_Search, maxRand_Search;
+	cout << setw(30) << "Введите диапазон для формирования массива " << razm << " элементов повторяющимися числами ОТ: ";
+	cin >> minRand_Search;
+	cout << setw(30) << "Введите диапазон для формирования массива " << razm << " элементов повторяющимися числами ДО: ";
+	cin >> maxRand_Search;
+	cout << endl;
+	while (maxRand_Search-minRand_Search >= razm)
+	{
+		cout << "В данном диапазоне не хватит цифр для повторения чисел" << endl;
+		cout << " Уменьшите диапазон ";
+		cout << setw(30) << "Введите диапазон для формирования массива " << razm << " элементов повторяющимися числами ОТ: ";
+		cin >> minRand_Search;
+		cout << endl;
+		cout << setw(30) << "Введите диапазон для формирования массива " << razm << " элементов повторяющимися числами ДО: ";
+		cin >> maxRand_Search;
+	}
+
+	cout << endl;
+	cout << setw(30) << "Сформированный массив для ф-ции Search: ";
+	Search(array,razm, minRand_Search, maxRand_Search);
+	//Print(array, razm);
+	//cout << endl;
+	//cout << setw(30) << "Сформированный массив для ф-ции Search: ";
 	
-	
-	
+	//repchar('=', 88);
+	cout << endl;
+	cout << endl;
+	cout << OFFSET << "========================================================\n\n";
+	cout << OFFSET << "              Милькин Сергей\n\n  ";
+	cout << OFFSET << "                   СБУ 223\n\n  ";
+	cout << OFFSET << "========================================================\n\n\n";
 
 }
 
@@ -106,11 +162,11 @@ void repchar(char simvol, int n)
 
 // ф-ция FillRand
 
-void FillRand(int array[], int size,int minRand, int maxRand)
+void FillRand(int array[], int size,int minRand_Fill, int maxRand_Fill)
 {
 	for (int i = 0; i < size; i++)
 	{
-		array[i] = rand() % (maxRand-minRand)+maxRand;
+		array[i] = rand() % (maxRand_Fill-minRand_Fill)+minRand_Fill;
 	}
 
 }
@@ -246,7 +302,7 @@ void SortMin(int array[], int size)
 //---------------------------------------
 // ф-ция Uniquerand
 
-void UniqueRand(int array[], int size, int minRand, int maxRand)
+void UniqueRand(int array[], int size, int minRand_Unique, int maxRand_Unique)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -255,7 +311,7 @@ void UniqueRand(int array[], int size, int minRand, int maxRand)
 		bool unique; //число уникально?
 		do
 		{
-			array[i] = rand() % size;
+			array[i] = rand() % (maxRand_Unique - minRand_Unique) + minRand_Unique;
 			unique = true; // предполагаем, что число уникально, но это нужно проверить
 
 			for (int j = 0; j < i; j++)
@@ -268,5 +324,66 @@ void UniqueRand(int array[], int size, int minRand, int maxRand)
 			}
 		} while (!unique);
 	}
+}	
+//---------------------------------------
+// ф-ция Search
+
+void Search(int array[], int razm, int minRand_Search, int maxRand_Search)
+
+
+{
+
+bool unique;
+unique = true;
+
+int povtor = 0;
+
+
+for (int i = 0; i < razm; i++)
+{
+	array[i] = rand() % (minRand_Search - maxRand_Search) + maxRand_Search;
+
+	cout << array[i] << "  ";
+
+
+	for (int j = 0; j < i; j++)
+	{
+
+
+		if (array[i] == array[j])
+		{
+			unique = false;
+			++povtor;
+			break;
+		}
+
+	}
+
+
 }
-//при вводе парам по умолчанию - ошибка !!!
+cout << endl;
+cout << "Количество повторений: " << povtor << endl;
+cout << endl;
+cout << "Повторяющиеся элементы: ";
+
+for (int i = 0; i < razm; i++)
+{
+	for (int j = 0; j < i; j++)
+	{
+
+		if (array[i] == array[j])
+		{
+			unique = false;
+			cout << array[j] << "  ";
+			break;
+		}
+
+	}
+
+}
+cout << endl;
+
+
+}
+
+

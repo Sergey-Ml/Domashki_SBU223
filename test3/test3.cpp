@@ -17,51 +17,62 @@ int main()
 	//cout << endl;
 	//cout << "Введите диапазон массива для уникальных чисел до: ";
 	//cin >> maxRand;
-	bool unique; //число уникально?
-	unique = false;
+	bool unique; 
+	unique = true;
+	
 	cout << "Сформированный массив: ";
-	cout << endl;
+
 	int povtor = 0;
+	int povtor1 = 0;
+
+	
 
 	for (int i = 0; i < size; i++)
 	{
-		array[i] = rand() % (55 - 50) + 55;
+		array[i] = rand() % (50 - 55) + 55;
 
 		cout << array[i] << "  ";
+			
+		
+			for (int j = 0; j < i; j++)
+			{
+				
 
+				if (array[i] == array[j])
+				{
+					unique = false;
+					++povtor;
+					break;
+				}
+			
+			}			
+		
+	}
+	cout << endl;
+	cout << "Количество повторений: " << povtor << endl;
+	cout << "Повторяющиеся элементы: ";
+
+	for (int i = 0; i < size; i++)
+	{
 		for (int j = 0; j < i; j++)
 		{
+
 			if (array[i] == array[j])
 			{
-				//unique = true;
-
-				//break;
-				++povtor;
-				//array1[i] = array[i];
+				unique = false;
+				cout << array[j] << "  ";
+				break;
 			}
 
 		}
-		//cout << "нОВЫЙ МАССИВ" << array1[i];
 
 	}
 	cout << endl;
-	//cout <<"Количество повторяющихся элементов: " << povtor;
-
+	
 
 }
 
-//bool unique; //число уникально?
-		//do
-		//{
-		//	//array[i] = rand() % (maxRand - minRand) + minRand;
-//unique = true; // предполагаем, что число уникально, но это нужно проверить
 
-//	for (int j = 0; j < i; j++)
-//	{
-//		if (array[i] == array[j])
-//		{
-//			unique = false;
-//			break;
-//		}
-//	}
-//} while (!unique);
+
+
+
