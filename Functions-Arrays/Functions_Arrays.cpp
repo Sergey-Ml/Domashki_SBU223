@@ -318,7 +318,7 @@ void ReversePrint(int array[], int size)
 
 double Sum(int array[], int size)
 {
-	int summa = 0;
+	double summa = 0;
 	for (int i = 0; i < size; i++)
 	{
 		summa += array[i];
@@ -328,7 +328,7 @@ double Sum(int array[], int size)
 }
 double Sum(float array[], int size)
 {
-	int summa = 0;
+	double summa = 0;
 	for (int i = 0; i < size; i++)
 	{
 		summa += array[i];
@@ -338,7 +338,7 @@ double Sum(float array[], int size)
 }
 double Sum(char array[], int size)
 {
-	int summa = 0;
+	double summa = 0;
 	for (int i = 0; i < size; i++)
 	{
 		summa += array[i];
@@ -348,7 +348,7 @@ double Sum(char array[], int size)
 }
 double Sum(double array[], int size)
 {
-	int summa = 0;
+	double summa = 0;
 	for (int i = 0; i < size; i++)
 	{
 		summa += array[i];
@@ -384,7 +384,7 @@ double Avg(double array[], int size)
 
 double minValueIn(int array[], int size)
 {
-	int min = array[0];
+	double min = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] < min)
@@ -395,7 +395,7 @@ double minValueIn(int array[], int size)
 
 double minValueIn(char array[], int size)
 {
-	int min = array[0];
+	double min = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] < min)
@@ -406,7 +406,7 @@ double minValueIn(char array[], int size)
 
 double minValueIn(float array[], int size)
 {
-	int min = array[0];
+	double min = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] < min)
@@ -417,7 +417,7 @@ double minValueIn(float array[], int size)
 
 double minValueIn(double array[], int size)
 {
-	int min = array[0];
+	double min = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] < min)
@@ -431,7 +431,7 @@ double minValueIn(double array[], int size)
 
 double maxValueIn(int array[], int size)
 {
-	int max = array[0];
+	double max = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] > max)
@@ -442,7 +442,7 @@ double maxValueIn(int array[], int size)
 
 double maxValueIn(float array[], int size)
 {
-	int max = array[0];
+	double max = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] > max)
@@ -452,7 +452,7 @@ double maxValueIn(float array[], int size)
 }
 double maxValueIn(char array[], int size)
 {
-	int max = array[0];
+	double max = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] > max)
@@ -462,7 +462,7 @@ double maxValueIn(char array[], int size)
 }
 double maxValueIn(double array[], int size)
 {
-	int max = array[0];
+	double max = array[0];
 	for (int i = 0; i < size; i++)
 	{
 		if (array[i] > max)
@@ -479,7 +479,7 @@ void shiftLeft(int array[], int size, int sdvig)
 {
 	for (int i = 0; i < sdvig; i++)
 	{
-		int temp = array[0];
+		double temp = array[0];
 		for (int i = 0; i < size; i++)
 		{
 			array[i] = array[i + 1];
@@ -491,7 +491,7 @@ void shiftLeft(char array[], int size, int sdvig)
 {
 	for (int i = 0; i < sdvig; i++)
 	{
-		int temp = array[0];
+		double temp = array[0];
 		for (int i = 0; i < size; i++)
 		{
 			array[i] = array[i + 1];
@@ -503,7 +503,7 @@ void shiftLeft(float array[], int size, int sdvig)
 {
 	for (int i = 0; i < sdvig; i++)
 	{
-		int temp = array[0];
+		double temp = array[0];
 		for (int i = 0; i < size; i++)
 		{
 			array[i] = array[i + 1];
@@ -515,7 +515,7 @@ void shiftLeft(double array[], int size, int sdvig)
 {
 	for (int i = 0; i < sdvig; i++)
 	{
-		int temp = array[0];
+		double temp = array[0];
 		for (int i = 0; i < size; i++)
 		{
 			array[i] = array[i + 1];
@@ -557,7 +557,7 @@ void SortMax(int array[], int size)
 		{
 			if (array[j] < array[i])
 			{
-				int temp = array[i];
+				double temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -573,7 +573,7 @@ void SortMax(char array[], int size)
 		{
 			if (array[j] < array[i])
 			{
-				int temp = array[i];
+				double temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -589,7 +589,7 @@ void SortMax(float array[], int size)
 		{
 			if (array[j] < array[i])
 			{
-				int temp = array[i];
+				double temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -605,7 +605,7 @@ void SortMax(double array[], int size)
 		{
 			if (array[j] < array[i])
 			{
-				int temp = array[i];
+				double temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -624,7 +624,7 @@ void SortMin(int array[], int size)
 		{
 			if (array[j] > array[i])
 			{
-				int temp = array[i];
+				double temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -641,7 +641,7 @@ void SortMin(char array[], int size)
 		{
 			if (array[j] > array[i])
 			{
-				int temp = array[i];
+				double temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -658,7 +658,7 @@ void SortMin(float array[], int size)
 		{
 			if (array[j] > array[i])
 			{
-				int temp = array[i];
+				double temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -675,7 +675,7 @@ void SortMin(double array[], int size)
 		{
 			if (array[j] > array[i])
 			{
-				int temp = array[i];
+				double temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
