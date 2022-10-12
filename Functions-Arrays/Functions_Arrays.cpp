@@ -4,19 +4,87 @@ using namespace std;
 #define OFFSET "\t\t\t\t"
 
 void repchar (char, int); // оформление
+
+
 void FillRand (int array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
+void FillRand (char array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
+void FillRand (float array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
+void FillRand (double array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
+
 void Print (int array[], int size);
+void Print (char array[], int size);
+void Print (float array[], int size);
+void Print (double array[], int size);
+
 void ReversePrint(int array[], int size);
-int Sum(int array[], int size);
+void ReversePrint(char array[], int size);
+void ReversePrint(float array[], int size);
+void ReversePrint(double array[], int size);
+
+
+double Sum(int array[], int size);
+double Sum(char array[], int size);
+double Sum(float array[], int size);
+double Sum(double array[], int size);
+
+
+
 double Avg(int array[], int size);
-int minValueIn(int array[], int size);
-int maxValueIn(int array[], int size);
+double Avg(char array[], int size);
+double Avg(float array[], int size);
+double Avg(double array[], int size);
+
+
+
+double minValueIn(int array[], int size);
+double minValueIn(char array[], int size);
+double minValueIn(float array[], int size);
+double minValueIn(double array[], int size);
+
+
+double maxValueIn(int array[], int size);
+double maxValueIn(char array[], int size);
+double maxValueIn(float array[], int size);
+double maxValueIn(double array[], int size);
+
+
 void shiftLeft(int array[], int size, int sdvig);
+void shiftLeft(char array[], int size, int sdvig);
+void shiftLeft(float array[], int size, int sdvig);
+void shiftLeft(double array[], int size, int sdvig);
+
+
 void shiftRight(int array[], int size, int sdvig);
+void shiftRight(char array[], int size, int sdvig);
+void shiftRight(float array[], int size, int sdvig);
+void shiftRight(double array[], int size, int sdvig);
+
+
 void SortMax(int array[], int size);
+void SortMax(char array[], int size);
+void SortMax(float array[], int size);
+void SortMax(double array[], int size);
+
+
 void SortMin(int array[], int size);
+void SortMin(char array[], int size);
+void SortMin(float array[], int size);
+void SortMin(double array[], int size);
+
+
+
 void UniqueRand(int array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
+void UniqueRand(char array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
+void UniqueRand(float array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
+void UniqueRand(double array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
+
+
+
 void Search(int array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
+void Search(char array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
+void Search(float array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
+void Search(double array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
+
 
 int main()
 {
@@ -160,7 +228,7 @@ void repchar(char simvol, int n)
 }
 // --------------------------------------
 
-// ф-ция FillRand
+// ф-ции FillRand
 
 void FillRand(int array[], int size,int minRand_Fill, int maxRand_Fill)
 {
@@ -170,10 +238,61 @@ void FillRand(int array[], int size,int minRand_Fill, int maxRand_Fill)
 	}
 
 }
+
+void FillRand(char array[], int size, int minRand_Fill, int maxRand_Fill)
+{
+	for (int i = 0; i < size; i++)
+	{
+		array[i] = rand() % (maxRand_Fill - minRand_Fill) + minRand_Fill;
+	}
+
+}
+void FillRand(float array[], int size, int minRand_Fill, int maxRand_Fill)
+{
+	for (int i = 0; i < size; i++)
+	{
+		array[i] = rand() % (maxRand_Fill - minRand_Fill) + minRand_Fill;
+	}
+
+}
+void FillRand(double array[], int size, int minRand_Fill, int maxRand_Fill)
+{
+	for (int i = 0; i < size; i++)
+	{
+		array[i] = rand() % (maxRand_Fill - minRand_Fill) + minRand_Fill;
+	}
+
+}
+
 //---------------------------------------
-// ф-ция Print
+// ф-ции Print
 
 void Print(int array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+
+}
+void Print(char array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+
+}void Print(float array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+
+}void Print(double array[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -195,9 +314,39 @@ void ReversePrint(int array[], int size)
 
 }
 //---------------------------------------
-// ф-ция Sum
+// ф-ции Sum
 
-int Sum(int array[], int size)
+double Sum(int array[], int size)
+{
+	int summa = 0;
+	for (int i = 0; i < size; i++)
+	{
+		summa += array[i];
+	}
+	//cout << "Сумма элементов массива: " << summa;
+	return summa;
+}
+double Sum(float array[], int size)
+{
+	int summa = 0;
+	for (int i = 0; i < size; i++)
+	{
+		summa += array[i];
+	}
+	//cout << "Сумма элементов массива: " << summa;
+	return summa;
+}
+double Sum(char array[], int size)
+{
+	int summa = 0;
+	for (int i = 0; i < size; i++)
+	{
+		summa += array[i];
+	}
+	//cout << "Сумма элементов массива: " << summa;
+	return summa;
+}
+double Sum(double array[], int size)
 {
 	int summa = 0;
 	for (int i = 0; i < size; i++)
@@ -208,17 +357,32 @@ int Sum(int array[], int size)
 	return summa;
 }
 //---------------------------------------
-// ф-ция Avg
+// ф-ции Avg
 
 double Avg(int array[], int size)
 {
 	return (double)Sum(array, size) / size;
 }
 
-//---------------------------------------
-// ф-ция minValueIn
+double Avg(char array[], int size)
+{
+	return (double)Sum(array, size) / size;
+}
 
-int minValueIn(int array[], int size)
+double Avg(float array[], int size)
+{
+	return (double)Sum(array, size) / size;
+}
+
+double Avg(double array[], int size)
+{
+	return (double)Sum(array, size) / size;
+}
+
+//---------------------------------------
+// ф-ции minValueIn
+
+double minValueIn(int array[], int size)
 {
 	int min = array[0];
 	for (int i = 0; i < size; i++)
@@ -228,10 +392,44 @@ int minValueIn(int array[], int size)
 	}
 	return min;
 }
-//---------------------------------------
-// ф-ция maxValueIn
 
-int maxValueIn(int array[], int size)
+double minValueIn(char array[], int size)
+{
+	int min = array[0];
+	for (int i = 0; i < size; i++)
+	{
+		if (array[i] < min)
+			min = array[i];
+	}
+	return min;
+}
+
+double minValueIn(float array[], int size)
+{
+	int min = array[0];
+	for (int i = 0; i < size; i++)
+	{
+		if (array[i] < min)
+			min = array[i];
+	}
+	return min;
+}
+
+double minValueIn(double array[], int size)
+{
+	int min = array[0];
+	for (int i = 0; i < size; i++)
+	{
+		if (array[i] < min)
+			min = array[i];
+	}
+	return min;
+}
+
+//---------------------------------------
+// ф-ции maxValueIn
+
+double maxValueIn(int array[], int size)
 {
 	int max = array[0];
 	for (int i = 0; i < size; i++)
@@ -241,8 +439,41 @@ int maxValueIn(int array[], int size)
 	}
 	return max;
 }
+
+double maxValueIn(float array[], int size)
+{
+	int max = array[0];
+	for (int i = 0; i < size; i++)
+	{
+		if (array[i] > max)
+			max = array[i];
+	}
+	return max;
+}
+double maxValueIn(char array[], int size)
+{
+	int max = array[0];
+	for (int i = 0; i < size; i++)
+	{
+		if (array[i] > max)
+			max = array[i];
+	}
+	return max;
+}
+double maxValueIn(double array[], int size)
+{
+	int max = array[0];
+	for (int i = 0; i < size; i++)
+	{
+		if (array[i] > max)
+			max = array[i];
+	}
+	return max;
+}
+
+
 //---------------------------------------
-// ф-ция shiftLeft
+// ф-ции shiftLeft
 
 void shiftLeft(int array[], int size, int sdvig)
 {
@@ -256,15 +487,67 @@ void shiftLeft(int array[], int size, int sdvig)
 		array[size - 1] = temp;
 	}
 }
+void shiftLeft(char array[], int size, int sdvig)
+{
+	for (int i = 0; i < sdvig; i++)
+	{
+		int temp = array[0];
+		for (int i = 0; i < size; i++)
+		{
+			array[i] = array[i + 1];
+		}
+		array[size - 1] = temp;
+	}
+}
+void shiftLeft(float array[], int size, int sdvig)
+{
+	for (int i = 0; i < sdvig; i++)
+	{
+		int temp = array[0];
+		for (int i = 0; i < size; i++)
+		{
+			array[i] = array[i + 1];
+		}
+		array[size - 1] = temp;
+	}
+}
+void shiftLeft(double array[], int size, int sdvig)
+{
+	for (int i = 0; i < sdvig; i++)
+	{
+		int temp = array[0];
+		for (int i = 0; i < size; i++)
+		{
+			array[i] = array[i + 1];
+		}
+		array[size - 1] = temp;
+	}
+}
 //---------------------------------------
-// ф-ция shiftRight
+// ф-ции shiftRight
 
 void shiftRight(int array[], int size, int sdvig)
 {
 	shiftLeft(array, size, size-sdvig);
 }
+
+void shiftRight(char array[], int size, int sdvig)
+{
+	shiftLeft(array, size, size - sdvig);
+}
+
+void shiftRight(float array[], int size, int sdvig)
+{
+	shiftLeft(array, size, size - sdvig);
+}
+
+void shiftRight(double array[], int size, int sdvig)
+{
+	shiftLeft(array, size, size - sdvig);
+}
+
 //---------------------------------------
-// ф-ция SortMax
+// ф-ции SortMax
 
 void SortMax(int array[], int size)
 {
@@ -281,8 +564,57 @@ void SortMax(int array[], int size)
 		}
 	}
 }
+
+void SortMax(char array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = i + 1; j < size; j++)
+		{
+			if (array[j] < array[i])
+			{
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+}
+
+void SortMax(float array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = i + 1; j < size; j++)
+		{
+			if (array[j] < array[i])
+			{
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+}
+
+void SortMax(double array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = i + 1; j < size; j++)
+		{
+			if (array[j] < array[i])
+			{
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+}
+
 //---------------------------------------
-// ф-ция SortMin
+// ф-ции SortMin
 
 void SortMin(int array[], int size)
 {
@@ -299,8 +631,60 @@ void SortMin(int array[], int size)
 		}
 	}
 }
+
+
+void SortMin(char array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = i + 1; j < size; j++)
+		{
+			if (array[j] > array[i])
+			{
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+}
+
+
+void SortMin(float array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = i + 1; j < size; j++)
+		{
+			if (array[j] > array[i])
+			{
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+}
+
+
+void SortMin(double array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = i + 1; j < size; j++)
+		{
+			if (array[j] > array[i])
+			{
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+}
+
 //---------------------------------------
-// ф-ция Uniquerand
+// ф-ции Uniquerand
 
 void UniqueRand(int array[], int size, int minRand_Unique, int maxRand_Unique)
 {
@@ -324,9 +708,84 @@ void UniqueRand(int array[], int size, int minRand_Unique, int maxRand_Unique)
 			}
 		} while (!unique);
 	}
-}	
+}
+
+void UniqueRand(float array[], int size, int minRand_Unique, int maxRand_Unique)
+{
+	for (int i = 0; i < size; i++)
+	{
+
+
+		bool unique; //число уникально?
+		do
+		{
+			array[i] = rand() % (maxRand_Unique - minRand_Unique) + minRand_Unique;
+			unique = true; // предполагаем, что число уникально, но это нужно проверить
+
+			for (int j = 0; j < i; j++)
+			{
+				if (array[i] == array[j])
+				{
+					unique = false;
+					break;
+				}
+			}
+		} while (!unique);
+	}
+}
+
+
+void UniqueRand(char array[], int size, int minRand_Unique, int maxRand_Unique)
+{
+	for (int i = 0; i < size; i++)
+	{
+
+
+		bool unique; //число уникально?
+		do
+		{
+			array[i] = rand() % (maxRand_Unique - minRand_Unique) + minRand_Unique;
+			unique = true; // предполагаем, что число уникально, но это нужно проверить
+
+			for (int j = 0; j < i; j++)
+			{
+				if (array[i] == array[j])
+				{
+					unique = false;
+					break;
+				}
+			}
+		} while (!unique);
+	}
+}
+
+
+void UniqueRand(double array[], int size, int minRand_Unique, int maxRand_Unique)
+{
+	for (int i = 0; i < size; i++)
+	{
+
+
+		bool unique; //число уникально?
+		do
+		{
+			array[i] = rand() % (maxRand_Unique - minRand_Unique) + minRand_Unique;
+			unique = true; // предполагаем, что число уникально, но это нужно проверить
+
+			for (int j = 0; j < i; j++)
+			{
+				if (array[i] == array[j])
+				{
+					unique = false;
+					break;
+				}
+			}
+		} while (!unique);
+	}
+}
+
 //---------------------------------------
-// ф-ция Search
+// ф-ции Search
 
 void Search(int array[], int razm, int minRand_Search, int maxRand_Search)
 
@@ -382,6 +841,180 @@ for (int i = 0; i < razm; i++)
 
 }
 cout << endl;
+
+
+}
+
+void Search(char array[], int razm, int minRand_Search, int maxRand_Search)
+
+
+{
+
+	bool unique;
+	unique = true;
+
+	int povtor = 0;
+
+
+	for (int i = 0; i < razm; i++)
+	{
+		array[i] = rand() % (minRand_Search - maxRand_Search) + maxRand_Search;
+
+		cout << array[i] << "  ";
+
+
+		for (int j = 0; j < i; j++)
+		{
+
+
+			if (array[i] == array[j])
+			{
+				unique = false;
+				++povtor;
+				break;
+			}
+
+		}
+
+
+	}
+	cout << endl;
+	cout << "Количество повторений: " << povtor << endl;
+	cout << endl;
+	cout << "Повторяющиеся элементы: ";
+
+	for (int i = 0; i < razm; i++)
+	{
+		for (int j = 0; j < i; j++)
+		{
+
+			if (array[i] == array[j])
+			{
+				unique = false;
+				cout << array[j] << "  ";
+				break;
+			}
+
+		}
+
+	}
+	cout << endl;
+
+
+}
+
+void Search(float array[], int razm, int minRand_Search, int maxRand_Search)
+
+
+{
+
+	bool unique;
+	unique = true;
+
+	int povtor = 0;
+
+
+	for (int i = 0; i < razm; i++)
+	{
+		array[i] = rand() % (minRand_Search - maxRand_Search) + maxRand_Search;
+
+		cout << array[i] << "  ";
+
+
+		for (int j = 0; j < i; j++)
+		{
+
+
+			if (array[i] == array[j])
+			{
+				unique = false;
+				++povtor;
+				break;
+			}
+
+		}
+
+
+	}
+	cout << endl;
+	cout << "Количество повторений: " << povtor << endl;
+	cout << endl;
+	cout << "Повторяющиеся элементы: ";
+
+	for (int i = 0; i < razm; i++)
+	{
+		for (int j = 0; j < i; j++)
+		{
+
+			if (array[i] == array[j])
+			{
+				unique = false;
+				cout << array[j] << "  ";
+				break;
+			}
+
+		}
+
+	}
+	cout << endl;
+
+
+}
+
+void Search(double array[], int razm, int minRand_Search, int maxRand_Search)
+
+
+{
+
+	bool unique;
+	unique = true;
+
+	int povtor = 0;
+
+
+	for (int i = 0; i < razm; i++)
+	{
+		array[i] = rand() % (minRand_Search - maxRand_Search) + maxRand_Search;
+
+		cout << array[i] << "  ";
+
+
+		for (int j = 0; j < i; j++)
+		{
+
+
+			if (array[i] == array[j])
+			{
+				unique = false;
+				++povtor;
+				break;
+			}
+
+		}
+
+
+	}
+	cout << endl;
+	cout << "Количество повторений: " << povtor << endl;
+	cout << endl;
+	cout << "Повторяющиеся элементы: ";
+
+	for (int i = 0; i < razm; i++)
+	{
+		for (int j = 0; j < i; j++)
+		{
+
+			if (array[i] == array[j])
+			{
+				unique = false;
+				cout << array[j] << "  ";
+				break;
+			}
+
+		}
+
+	}
+	cout << endl;
 
 
 }
