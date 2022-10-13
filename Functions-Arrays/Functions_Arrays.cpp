@@ -1,7 +1,7 @@
 ﻿
 //!!!!!!!!!!поторопился выложить домашку!!!!!!
 // Двумерные еще пишу!!!!!!!!!!!!!!!
-// Готовы только FillRand и Print
+// Готовы только FillRand и Print и ReversePrint
 
 
 
@@ -39,6 +39,10 @@ void ReversePrint(int array[], int size);
 void ReversePrint(char array[], int size);
 void ReversePrint(float array[], int size);
 void ReversePrint(double array[], int size);
+void ReversePrint(int array_2[ROWS][COLS], const int ROWS, const int COLS);
+void ReversePrint(char array_2[ROWS][COLS], const int ROWS, const int COLS);
+void ReversePrint(float array_2[ROWS][COLS], const int ROWS, const int COLS);
+void ReversePrint(double array_2[ROWS][COLS], const int ROWS, const int COLS);
 
 
 double Sum(int array[], int size);
@@ -269,6 +273,10 @@ int main()
 	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
 
+	cout << setw(30) << " Обратный массив: " << endl;
+	ReversePrint(array_2, RAZM_ROWS, RAZM_COLS);
+	cout << endl;
+
 	
 	cout << endl;
 	cout << endl;
@@ -464,7 +472,7 @@ void Print(double array_2[ROWS][COLS], const int ROWS, const int COLS)
 
 void ReversePrint(int array[], int size)
 {
-	for (int i = size-1; i >=0; i--)
+	for (int i = size - 1; i >= 0; i--)
 	{
 		cout << array[i] << " ";
 	}
@@ -501,6 +509,76 @@ void ReversePrint(double array[], int size)
 	cout << endl;
 
 }
+
+
+void ReversePrint(int array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+
+	for (int i = ROWS - 1; i >= 0; i--)
+	{
+		for (int j = COLS - 1; j >= 0; j--)
+		{
+
+			cout << setw(8) << array_2[i][j] << "  ";
+
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+
+void ReversePrint(char array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+
+	for (int i = ROWS - 1; i >= 0; i--)
+	{
+		for (int j = COLS - 1; j >= 0; j--)
+		{
+
+			cout << setw(8) << array_2[i][j] << "  ";
+
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+
+void ReversePrint(float array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+
+	for (int i = ROWS - 1; i >= 0; i--)
+	{
+		for (int j = COLS - 1; j >= 0; j--)
+		{
+
+			cout << setw(8) << array_2[i][j] << "  ";
+
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+
+void ReversePrint(double array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+
+	for (int i = ROWS - 1; i >= 0; i--)
+	{
+		for (int j = COLS - 1; j >= 0; j--)
+		{
+
+			cout << setw(8) << array_2[i][j] << "  ";
+
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+
 //---------------------------------------
 // ф-ции Sum
 

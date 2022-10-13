@@ -7,6 +7,7 @@ const int ROWS = 100;
 const int COLS = 100;
 void FillRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand=100);
 void Print(int array_2[ROWS][COLS], const int ROWS, const int COLS);
+void ReversePrint(int array_2[ROWS][COLS], const int ROWS, const int COLS);
 
 int main()
 {
@@ -50,6 +51,9 @@ int main()
 	cout << setw(30) << " Cформированный массив: " << endl;
 	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
+	cout << setw(30) << " Обратный массив: " << endl;
+	ReversePrint(array_2, RAZM_ROWS, RAZM_COLS);
+	cout << endl;
 
 
 }
@@ -76,3 +80,20 @@ void Print(int array_2[ROWS][COLS], const int ROWS, const int COLS)
 	cout << endl;
 
 }
+
+void ReversePrint(int array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+
+		for (int i = ROWS-1; i>=0; i--)
+		{
+			for (int j = COLS - 1; j >= 0; j--)
+			{
+				
+					cout << setw(8) << array_2[i][j] << "  ";
+				
+			}
+			cout << endl;
+		}
+		cout << endl;
+}
+
