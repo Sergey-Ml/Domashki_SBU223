@@ -1,7 +1,8 @@
 ﻿
-////!!!!!!!!!!!!!!! ПОКА БЕЗ ДВУМЕРНЫХ!!!!
-//поторопился выложить домашку!!!!!!
+//!!!!!!!!!!поторопился выложить домашку!!!!!!
 // Двумерные еще пишу!!!!!!!!!!!!!!!
+// Готовы только FillRand и Print
+
 
 
 #include<iostream>
@@ -9,8 +10,8 @@
 using namespace std;
 #define OFFSET "\t\t\t\t"
 
-const int ROWS = 10;
-const int COLS = 10;
+const int ROWS = 100;
+const int COLS = 100;
 void repchar (char, int); // оформление
 
 
@@ -18,13 +19,21 @@ void FillRand (int array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void FillRand (char array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void FillRand (float array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void FillRand (double array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
-void FillRand (int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Fill = 0, int maxRand_Fill = 100);
+void FillRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
+void FillRand(char array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
+void FillRand(float array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
+void FillRand(double array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
+
+
 
 void Print (int array[], int size);
 void Print (char array[], int size);
 void Print (float array[], int size);
 void Print (double array[], int size);
-void Print (int array_2[ROWS][COLS], int size_2);
+void Print(int array_2[ROWS][COLS], const int ROWS, const int COLS);
+void Print(char array_2[ROWS][COLS], const int ROWS, const int COLS);
+void Print(float array_2[ROWS][COLS], const int ROWS, const int COLS);
+void Print(double array_2[ROWS][COLS], const int ROWS, const int COLS);
 
 void ReversePrint(int array[], int size);
 void ReversePrint(char array[], int size);
@@ -214,11 +223,7 @@ int main()
 	cout << endl;
 	cout << setw(30) << "Сформированный массив для ф-ции Search: ";
 	Search(array,razm, minRand_Search, maxRand_Search);
-	//Print(array, razm);
-	//cout << endl;
-	//cout << setw(30) << "Сформированный массив для ф-ции Search: ";
 	
-	//repchar('=', 88);
 
 	cout << OFFSET << "========================================================\n\n";
 	cout << OFFSET << "             Проект Function/Arrays \n\n  ";
@@ -226,33 +231,42 @@ int main()
 	cout << OFFSET << "========================================================\n\n\n";
 
 
-	cout << "  Введите размер массива (не больше 100):  ";
-	int razm_2;
-	cin >> razm_2;
-	cout << endl;
-	while (razm_2 > 100 || razm_2 <= 0)
+	cout << "Введите количество строк (не более 100): ";
+	int RAZM_ROWS;
+	cin >> RAZM_ROWS;
+
+	while (RAZM_ROWS > 100 || RAZM_ROWS <= 0)
 	{
-		cout << " Размер массива может быть от 1 до 100!" << endl;
+		cout << " Количество строк может быть от 1 до 100!" << endl;
 		cout << " Введите снова: ";
-		cin >> razm_2;
+		cin >> RAZM_ROWS;
 	}
-	
+	cout << endl;
+
+	cout << "Введите количество столбцов (не более 100): ";
+	int RAZM_COLS;
+	cin >> RAZM_COLS;
+	cout << endl;
+	while (RAZM_COLS > 100 || RAZM_COLS <= 0)
+	{
+		cout << " Количество столбцов может быть от 1 до 100!" << endl;
+		cout << " Введите снова: ";
+		cin >> RAZM_COLS;
+	}
+	cout << endl;
 	int array_2[ROWS][COLS];
 
 	int minRand_Fill_2, maxRand_Fill_2;
-	cout << setw(30) << "Введите диапазон массива из " << razm << " элементов для случайных чисел от : ";
+	cout << setw(30) << "Введите диапазон массива для случайных чисел ОТ : ";
 	cin >> minRand_Fill_2;
 	cout << endl;
-	cout << setw(30) << "Введите диапазон массива из " << razm << " элементов для случайных чисел до: ";
+	cout << setw(30) << "Введите диапазон массива для случайных чисел ДО: ";
 	cin >> maxRand_Fill_2;
 
-	FillRand(array_2, ROWS,COLS, minRand_Fill_2, maxRand_Fill_2);
+	FillRand(array_2, RAZM_ROWS, RAZM_COLS, minRand_Fill_2, maxRand_Fill_2);
 
-
-
-	repchar('=', 88);
-	cout << setw(30) << " Cформированный массив: ";
-	Print(array_2, razm_2);
+	cout << setw(30) << " Cформированный массив: " << endl;
+	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
 
 	
@@ -315,7 +329,40 @@ void FillRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRa
 {
 	for (int i = 0; i < ROWS; i++)
 	{
-		for (int j = 0; i < COLS; i++)
+		for (int j = 0; j < COLS; j++)
+		{
+			array_2[i][j] = rand() % (maxRand_Fill - minRand_Fill) + minRand_Fill;
+		}
+	}
+}
+
+void FillRand(char array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Fill, int maxRand_Fill)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			array_2[i][j] = rand() % (maxRand_Fill - minRand_Fill) + minRand_Fill;
+		}
+	}
+}
+
+void FillRand(float array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Fill, int maxRand_Fill)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			array_2[i][j] = rand() % (maxRand_Fill - minRand_Fill) + minRand_Fill;
+		}
+	}
+}
+
+void FillRand(double array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Fill, int maxRand_Fill)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
 		{
 			array_2[i][j] = rand() % (maxRand_Fill - minRand_Fill) + minRand_Fill;
 		}
@@ -365,17 +412,53 @@ void Print(double array[], int size)
 
 }
 
-void Print(int array_2[ROWS][COLS], int size)
+void Print(int array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < ROWS; i++)
 	{
-		for (int j=0; j<COLS; j++)
-		cout << array_2[i][j] << " ";
+		for (int j = 0; j < COLS; j++)
+			cout << setw(8) << array_2[i][j] << "  ";
+		cout << endl;
 	}
 	cout << endl;
 
 }
 
+void Print(char array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+			cout << setw(8) << array_2[i][j] << "  ";
+		cout << endl;
+	}
+	cout << endl;
+
+}
+
+void Print(float array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+			cout << setw(8) << array_2[i][j] << "  ";
+		cout << endl;
+	}
+	cout << endl;
+
+}
+
+void Print(double array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+			cout << setw(8) << array_2[i][j] << "  ";
+		cout << endl;
+	}
+	cout << endl;
+
+}
 //---------------------------------------
 // ф-ции ReversePrint
 
