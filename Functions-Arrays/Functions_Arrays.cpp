@@ -1,8 +1,16 @@
-﻿#include<iostream>
+﻿
+////!!!!!!!!!!!!!!! ПОКА БЕЗ ДВУМЕРНЫХ!!!!
+//поторопился выложить домашку!!!!!!
+// Двумерные еще пишу!!!!!!!!!!!!!!!
+
+
+#include<iostream>
 #include<iomanip>
 using namespace std;
 #define OFFSET "\t\t\t\t"
 
+const int ROWS = 10;
+const int COLS = 10;
 void repchar (char, int); // оформление
 
 
@@ -10,11 +18,13 @@ void FillRand (int array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void FillRand (char array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void FillRand (float array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void FillRand (double array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
+void FillRand (int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Fill = 0, int maxRand_Fill = 100);
 
 void Print (int array[], int size);
 void Print (char array[], int size);
 void Print (float array[], int size);
 void Print (double array[], int size);
+void Print (int array_2[ROWS][COLS], int size_2);
 
 void ReversePrint(int array[], int size);
 void ReversePrint(char array[], int size);
@@ -209,6 +219,43 @@ int main()
 	//cout << setw(30) << "Сформированный массив для ф-ции Search: ";
 	
 	//repchar('=', 88);
+
+	cout << OFFSET << "========================================================\n\n";
+	cout << OFFSET << "             Проект Function/Arrays \n\n  ";
+	cout << OFFSET << "                Двумерный массив \n\n  ";
+	cout << OFFSET << "========================================================\n\n\n";
+
+
+	cout << "  Введите размер массива (не больше 100):  ";
+	int razm_2;
+	cin >> razm_2;
+	cout << endl;
+	while (razm_2 > 100 || razm_2 <= 0)
+	{
+		cout << " Размер массива может быть от 1 до 100!" << endl;
+		cout << " Введите снова: ";
+		cin >> razm_2;
+	}
+	
+	int array_2[ROWS][COLS];
+
+	int minRand_Fill_2, maxRand_Fill_2;
+	cout << setw(30) << "Введите диапазон массива из " << razm << " элементов для случайных чисел от : ";
+	cin >> minRand_Fill_2;
+	cout << endl;
+	cout << setw(30) << "Введите диапазон массива из " << razm << " элементов для случайных чисел до: ";
+	cin >> maxRand_Fill_2;
+
+	FillRand(array_2, ROWS,COLS, minRand_Fill_2, maxRand_Fill_2);
+
+
+
+	repchar('=', 88);
+	cout << setw(30) << " Cформированный массив: ";
+	Print(array_2, razm_2);
+	cout << endl;
+
+	
 	cout << endl;
 	cout << endl;
 	cout << OFFSET << "========================================================\n\n";
@@ -264,6 +311,17 @@ void FillRand(double array[], int size, int minRand_Fill, int maxRand_Fill)
 
 }
 
+void FillRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Fill, int maxRand_Fill)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; i < COLS; i++)
+		{
+			array_2[i][j] = rand() % (maxRand_Fill - minRand_Fill) + minRand_Fill;
+		}
+	}
+}
+
 //---------------------------------------
 // ф-ции Print
 
@@ -276,6 +334,7 @@ void Print(int array[], int size)
 	cout << endl;
 
 }
+
 void Print(char array[], int size)
 {
 	for (int i = 0; i < size; i++)
@@ -284,15 +343,9 @@ void Print(char array[], int size)
 	}
 	cout << endl;
 
-}void Print(float array[], int size)
-{
-	for (int i = 0; i < size; i++)
-	{
-		cout << array[i] << " ";
-	}
-	cout << endl;
+}
 
-}void Print(double array[], int size)
+void Print(float array[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -301,12 +354,64 @@ void Print(char array[], int size)
 	cout << endl;
 
 }
+
+void Print(double array[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+
+}
+
+void Print(int array_2[ROWS][COLS], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		for (int j=0; j<COLS; j++)
+		cout << array_2[i][j] << " ";
+	}
+	cout << endl;
+
+}
+
 //---------------------------------------
-// ф-ция ReversePrint
+// ф-ции ReversePrint
 
 void ReversePrint(int array[], int size)
 {
 	for (int i = size-1; i >=0; i--)
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+
+}
+
+void ReversePrint(char array[], int size)
+{
+	for (int i = size - 1; i >= 0; i--)
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+
+}
+
+void ReversePrint(float array[], int size)
+{
+	for (int i = size - 1; i >= 0; i--)
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+
+}
+
+void ReversePrint(double array[], int size)
+{
+	for (int i = size - 1; i >= 0; i--)
 	{
 		cout << array[i] << " ";
 	}
@@ -326,7 +431,7 @@ double Sum(int array[], int size)
 	//cout << "Сумма элементов массива: " << summa;
 	return summa;
 }
-double Sum(float array[], int size)
+double Sum(char array[], int size)
 {
 	double summa = 0;
 	for (int i = 0; i < size; i++)
@@ -336,7 +441,7 @@ double Sum(float array[], int size)
 	//cout << "Сумма элементов массива: " << summa;
 	return summa;
 }
-double Sum(char array[], int size)
+double Sum(float array[], int size)
 {
 	double summa = 0;
 	for (int i = 0; i < size; i++)
@@ -440,7 +545,7 @@ double maxValueIn(int array[], int size)
 	return max;
 }
 
-double maxValueIn(float array[], int size)
+double maxValueIn(char array[], int size)
 {
 	double max = array[0];
 	for (int i = 0; i < size; i++)
@@ -450,7 +555,7 @@ double maxValueIn(float array[], int size)
 	}
 	return max;
 }
-double maxValueIn(char array[], int size)
+double maxValueIn(float array[], int size)
 {
 	double max = array[0];
 	for (int i = 0; i < size; i++)
@@ -710,7 +815,7 @@ void UniqueRand(int array[], int size, int minRand_Unique, int maxRand_Unique)
 	}
 }
 
-void UniqueRand(float array[], int size, int minRand_Unique, int maxRand_Unique)
+void UniqueRand(char array[], int size, int minRand_Unique, int maxRand_Unique)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -735,7 +840,7 @@ void UniqueRand(float array[], int size, int minRand_Unique, int maxRand_Unique)
 }
 
 
-void UniqueRand(char array[], int size, int minRand_Unique, int maxRand_Unique)
+void UniqueRand(float array[], int size, int minRand_Unique, int maxRand_Unique)
 {
 	for (int i = 0; i < size; i++)
 	{
