@@ -1,9 +1,6 @@
 ﻿
-//!!!!!!!!!!поторопился выложить домашку!!!!!!
-// Двумерные еще пишу!!!!!!!!!!!!!!!
-// Готовы только FillRand и Print и ReversePrint
-
-
+/// Это просто праздник какой-то, а не домашка!!!!!!
+// осталась последняя ф-ция Search
 
 #include<iostream>
 #include<iomanip>
@@ -89,12 +86,19 @@ void shiftLeft(char array[], int size, int sdvig);
 void shiftLeft(float array[], int size, int sdvig);
 void shiftLeft(double array[], int size, int sdvig);
 void shiftLeft(int array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2);
+void shiftLeft(char array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2);
+void shiftLeft(float array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2);
+void shiftLeft(double array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2);
 
 
 void shiftRight(int array[], int size, int sdvig);
 void shiftRight(char array[], int size, int sdvig);
 void shiftRight(float array[], int size, int sdvig);
 void shiftRight(double array[], int size, int sdvig);
+void shiftRight(int array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3);
+void shiftRight(char array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3);
+void shiftRight(float array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3);
+void shiftRight(double array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3);
 
 
 void SortMax(int array[], int size);
@@ -102,20 +106,29 @@ void SortMax(char array[], int size);
 void SortMax(float array[], int size);
 void SortMax(double array[], int size);
 void SortMax(int array_2[ROWS][COLS], const int ROWS, const int COLS);
+void SortMax(char array_2[ROWS][COLS], const int ROWS, const int COLS);
+void SortMax(float array_2[ROWS][COLS], const int ROWS, const int COLS);
+void SortMax(double array_2[ROWS][COLS], const int ROWS, const int COLS);
 
 
 void SortMin(int array[], int size);
 void SortMin(char array[], int size);
 void SortMin(float array[], int size);
 void SortMin(double array[], int size);
-
+void SortMin(int array_2[ROWS][COLS], const int ROWS, const int COLS);
+void SortMin(char array_2[ROWS][COLS], const int ROWS, const int COLS);
+void SortMin(float array_2[ROWS][COLS], const int ROWS, const int COLS);
+void SortMin(double array_2[ROWS][COLS], const int ROWS, const int COLS);
 
 
 void UniqueRand(int array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
 void UniqueRand(char array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
 void UniqueRand(float array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
 void UniqueRand(double array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
-
+void UniqueRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique = 0, int maxRand_Unique = 100);
+void UniqueRand(char array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique = 0, int maxRand_Unique = 100);
+void UniqueRand(float array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique = 0, int maxRand_Unique = 100);
+void UniqueRand(double array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique = 0, int maxRand_Unique = 100);
 
 
 void Search(int array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
@@ -308,32 +321,49 @@ int main()
 
 	repchar('-', 88);
 	
-	SortMax(array, razm);
-	cout << setw(30) << "Сортировка по возрастанию: ";
-	Print(array, razm);
+	SortMax(array_2, RAZM_ROWS, RAZM_COLS);
+	cout << setw(30) << "Сортировка по возрастанию: "<< endl;
+	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
 
-	//SortMin(array, razm);
-	//cout << setw(30) << "Сортировка по убыванию: ";
-	//Print(array, razm);
-	//cout << endl;
+	SortMin(array_2, RAZM_ROWS, RAZM_COLS);
+	cout << setw(30) << "Сортировка по убыванию: " << endl;
+	Print(array_2, RAZM_ROWS, RAZM_COLS);
+	cout << endl;
 
 	cout << setw(30) << "Введите число сдвига влево: ";
 	int sdvig_2;
 	cin >> sdvig_2;
 	shiftLeft(array_2, RAZM_ROWS, RAZM_COLS,sdvig_2);
-	cout << "  Сдвинутый влево на " << sdvig_2 << " элем.: ";
+	cout << "  Сдвинутый влево на " << sdvig_2 << " элем.: " << endl;
 	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
 
-	/*cout << setw(30) << "Введите число сдвига вправо: ";
-	cin >> sdvig;
-	shiftRight(array, razm, sdvig);
-	cout << " Сдвинутый вправо на " << sdvig << " элем.: ";
-	Print(array, razm);
-	cout << endl;*/
+	cout << setw(30) << "Введите число сдвига вправо: ";
+	int sdvig_3;
+	cin >> sdvig_3;
+	shiftRight(array_2, RAZM_ROWS, RAZM_COLS, sdvig_3);
+	cout << " Сдвинутый вправо на " << sdvig_3 << " элем.: " << endl;
+	Print(array_2, RAZM_ROWS, RAZM_COLS);
+	cout << endl;
+
+	cout << OFFSET << "========================================================\n\n";
+	cout << OFFSET << "      Функция Uniquerand для двумерных массивов \n\n  ";
+	cout << OFFSET << "           Работа с уникальными числами \n\n  ";
+	cout << OFFSET << "========================================================\n\n\n";
 
 
+	int minRand_Unique_2, maxRand_Unique_2;
+	cout << setw(30) << "Введите диапазон для формирования массива из " << RAZM_ROWS*RAZM_COLS << " элементов уникальными числами ОТ: ";
+	cin >> minRand_Unique_2;
+	cout << setw(30) << "Введите диапазон для формирования массива из " << RAZM_ROWS*RAZM_COLS << " элементов уникальными числами ДО: ";
+	cin >> maxRand_Unique_2;
+	cout << endl;
+
+	UniqueRand(array_2, RAZM_ROWS, RAZM_COLS, minRand_Unique_2, maxRand_Unique_2);
+	cout << setw(30) << "Сформированный массив из уникальных чисел: " << endl;
+	Print(array_2, RAZM_ROWS, RAZM_COLS);
+	cout << endl;
 
 	cout << endl;
 	cout << endl;
@@ -1036,18 +1066,88 @@ void shiftLeft(double array[], int size, int sdvig)
 void shiftLeft(int array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
 {
 	for (int i = 0; i < sdvig_2; i++)
-
 	{
 		double temp = array_2[0][0];
-		for (int i = 0; i < ROWS; i++)
+		for (int j = 0; j < ROWS; j++)
 		{
-			for (int j = 0; j < COLS; j++)
-			{
-				array_2[i][j] = array_2[i + 1][j];
 
-				array_2[ROWS - 1][COLS] = temp;
+			for (int g = 0; g < COLS - 1; g++)
+			{
+
+				
+				array_2[j][g] = array_2[j][g + 1];
+
 			}
+			array_2[j][COLS - 1] = array_2[j + 1][0];
+			
 		}
+		array_2[ROWS - 1][COLS - 1] = temp;
+	}
+}
+
+void shiftLeft(char array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
+{
+	for (int i = 0; i < sdvig_2; i++)
+	{
+		double temp = array_2[0][0];
+		for (int j = 0; j < ROWS; j++)
+		{
+
+			for (int g = 0; g < COLS - 1; g++)
+			{
+
+
+				array_2[j][g] = array_2[j][g + 1];
+
+			}
+			array_2[j][COLS - 1] = array_2[j + 1][0];
+
+		}
+		array_2[ROWS - 1][COLS - 1] = temp;
+	}
+}
+
+void shiftLeft(float array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
+{
+	for (int i = 0; i < sdvig_2; i++)
+	{
+		double temp = array_2[0][0];
+		for (int j = 0; j < ROWS; j++)
+		{
+
+			for (int g = 0; g < COLS - 1; g++)
+			{
+
+
+				array_2[j][g] = array_2[j][g + 1];
+
+			}
+			array_2[j][COLS - 1] = array_2[j + 1][0];
+
+		}
+		array_2[ROWS - 1][COLS - 1] = temp;
+	}
+}
+
+void shiftLeft(double array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
+{
+	for (int i = 0; i < sdvig_2; i++)
+	{
+		double temp = array_2[0][0];
+		for (int j = 0; j < ROWS; j++)
+		{
+
+			for (int g = 0; g < COLS - 1; g++)
+			{
+
+
+				array_2[j][g] = array_2[j][g + 1];
+
+			}
+			array_2[j][COLS - 1] = array_2[j + 1][0];
+
+		}
+		array_2[ROWS - 1][COLS - 1] = temp;
 	}
 }
 //---------------------------------------
@@ -1072,6 +1172,27 @@ void shiftRight(double array[], int size, int sdvig)
 {
 	shiftLeft(array, size, size - sdvig);
 }
+
+void shiftRight(int array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
+{
+	shiftLeft(array_2, ROWS, COLS, ROWS*COLS-sdvig_3);
+}
+
+void shiftRight(char array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
+{
+	shiftLeft(array_2, ROWS, COLS, ROWS * COLS - sdvig_3);
+}
+
+void shiftRight(float array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
+{
+	shiftLeft(array_2, ROWS, COLS, ROWS * COLS - sdvig_3);
+}
+
+void shiftRight(double array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
+{
+	shiftLeft(array_2, ROWS, COLS, ROWS * COLS - sdvig_3);
+}
+
 
 //---------------------------------------
 // ф-ции SortMax
@@ -1137,6 +1258,97 @@ void SortMax(double array[], int size)
 				array[j] = temp;
 			}
 		}
+	}
+}
+
+void SortMax(int array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				{
+					//array_2[i][j] -  выбранный элемент
+					//array_2[k][l] -  перебираемый элемент
+					if (array_2[k][l] < array_2[i][j])
+					{
+						swap(array_2[i][j], array_2[k][l]);
+					}
+				}
+			}
+		}
+
+	}
+}
+void SortMax(char array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				{
+					//array_2[i][j] -  выбранный элемент
+					//array_2[k][l] -  перебираемый элемент
+					if (array_2[k][l] < array_2[i][j])
+					{
+						swap(array_2[i][j], array_2[k][l]);
+					}
+				}
+			}
+		}
+
+	}
+}
+
+void SortMax(float array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				{
+					//array_2[i][j] -  выбранный элемент
+					//array_2[k][l] -  перебираемый элемент
+					if (array_2[k][l] < array_2[i][j])
+					{
+						swap(array_2[i][j], array_2[k][l]);
+					}
+				}
+			}
+		}
+
+	}
+}
+
+void SortMax(double array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				{
+					//array_2[i][j] -  выбранный элемент
+					//array_2[k][l] -  перебираемый элемент
+					if (array_2[k][l] < array_2[i][j])
+					{
+						swap(array_2[i][j], array_2[k][l]);
+					}
+				}
+			}
+		}
+
 	}
 }
 
@@ -1207,6 +1419,98 @@ void SortMin(double array[], int size)
 				array[j] = temp;
 			}
 		}
+	}
+}
+
+void SortMin(int array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				{
+					//array_2[i][j] -  выбранный элемент
+					//array_2[k][l] -  перебираемый элемент
+					if (array_2[k][l] > array_2[i][j])
+					{
+						swap(array_2[i][j], array_2[k][l]);
+					}
+				}
+			}
+		}
+
+	}
+}
+
+void SortMin(char array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				{
+					//array_2[i][j] -  выбранный элемент
+					//array_2[k][l] -  перебираемый элемент
+					if (array_2[k][l] > array_2[i][j])
+					{
+						swap(array_2[i][j], array_2[k][l]);
+					}
+				}
+			}
+		}
+
+	}
+}
+
+void SortMin(float array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				{
+					//array_2[i][j] -  выбранный элемент
+					//array_2[k][l] -  перебираемый элемент
+					if (array_2[k][l] > array_2[i][j])
+					{
+						swap(array_2[i][j], array_2[k][l]);
+					}
+				}
+			}
+		}
+
+	}
+}
+
+void SortMin(double array_2[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				{
+					//array_2[i][j] -  выбранный элемент
+					//array_2[k][l] -  перебираемый элемент
+					if (array_2[k][l] > array_2[i][j])
+					{
+						swap(array_2[i][j], array_2[k][l]);
+					}
+				}
+			}
+		}
+
 	}
 }
 
@@ -1311,6 +1615,130 @@ void UniqueRand(double array[], int size, int minRand_Unique, int maxRand_Unique
 	}
 }
 
+void UniqueRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
+{
+
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			bool unique; //число уникально?
+			do
+			{
+				array_2[i][j] = rand() % (maxRand_Unique - minRand_Unique) + minRand_Unique;
+				unique = true; // предполагаем, что число уникально, но это нужно проверить
+				for (int k = 0; k <= i; k++)
+				{
+					for (int l = 0; l < (k == i ? j : COLS); l++) // строк4и до выбранной перебираем полностью, а строку с выбранн э-м перебираем частично до выбранного эл-та исключительно
+					{
+						////array_2[k][l] -  перебираемый элемент
+						if (array_2[k][l] == array_2[i][j])
+						{
+							unique = false;
+							break;
+						}
+					}
+				}
+
+			} while (!unique);
+		}
+
+	}
+}
+
+void UniqueRand(char array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
+{
+
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			bool unique; //число уникально?
+			do
+			{
+				array_2[i][j] = rand() % (maxRand_Unique - minRand_Unique) + minRand_Unique;
+				unique = true; // предполагаем, что число уникально, но это нужно проверить
+				for (int k = 0; k <= i; k++)
+				{
+					for (int l = 0; l < (k == i ? j : COLS); l++) // строк4и до выбранной перебираем полностью, а строку с выбранн э-м перебираем частично до выбранного эл-та исключительно
+					{
+						////array_2[k][l] -  перебираемый элемент
+						if (array_2[k][l] == array_2[i][j])
+						{
+							unique = false;
+							break;
+						}
+					}
+				}
+
+			} while (!unique);
+		}
+
+	}
+}
+
+void UniqueRand(float array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
+{
+
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			bool unique; //число уникально?
+			do
+			{
+				array_2[i][j] = rand() % (maxRand_Unique - minRand_Unique) + minRand_Unique;
+				unique = true; // предполагаем, что число уникально, но это нужно проверить
+				for (int k = 0; k <= i; k++)
+				{
+					for (int l = 0; l < (k == i ? j : COLS); l++) // строк4и до выбранной перебираем полностью, а строку с выбранн э-м перебираем частично до выбранного эл-та исключительно
+					{
+						////array_2[k][l] -  перебираемый элемент
+						if (array_2[k][l] == array_2[i][j])
+						{
+							unique = false;
+							break;
+						}
+					}
+				}
+
+			} while (!unique);
+		}
+
+	}
+}
+
+void UniqueRand(double array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
+{
+
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			bool unique; //число уникально?
+			do
+			{
+				array_2[i][j] = rand() % (maxRand_Unique - minRand_Unique) + minRand_Unique;
+				unique = true; // предполагаем, что число уникально, но это нужно проверить
+				for (int k = 0; k <= i; k++)
+				{
+					for (int l = 0; l < (k == i ? j : COLS); l++) // строк4и до выбранной перебираем полностью, а строку с выбранн э-м перебираем частично до выбранного эл-та исключительно
+					{
+						////array_2[k][l] -  перебираемый элемент
+						if (array_2[k][l] == array_2[i][j])
+						{
+							unique = false;
+							break;
+						}
+					}
+				}
+
+			} while (!unique);
+		}
+
+	}
+}
+
 //---------------------------------------
 // ф-ции Search
 
@@ -1373,10 +1801,7 @@ cout << endl;
 }
 
 void Search(char array[], int razm, int minRand_Search, int maxRand_Search)
-
-
 {
-
 	bool unique;
 	unique = true;
 
