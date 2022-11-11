@@ -1,6 +1,6 @@
 ﻿
 /// Это просто праздник какой-то, а не домашка!!!!!!
-// осталась последняя ф-ция Search
+
 
 #include<iostream>
 #include<iomanip>
@@ -16,6 +16,7 @@ void FillRand (int array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void FillRand (char array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void FillRand (float array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 void FillRand (double array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
+
 void FillRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 void FillRand(char array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 void FillRand(float array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
@@ -26,6 +27,7 @@ void Print (int array[], int size);
 void Print (char array[], int size);
 void Print (float array[], int size);
 void Print (double array[], int size);
+
 void Print(int array_2[ROWS][COLS], const int ROWS, const int COLS);
 void Print(char array_2[ROWS][COLS], const int ROWS, const int COLS);
 void Print(float array_2[ROWS][COLS], const int ROWS, const int COLS);
@@ -36,6 +38,7 @@ void ReversePrint(int array[], int size);
 void ReversePrint(char array[], int size);
 void ReversePrint(float array[], int size);
 void ReversePrint(double array[], int size);
+
 void ReversePrint(int array_2[ROWS][COLS], const int ROWS, const int COLS);
 void ReversePrint(char array_2[ROWS][COLS], const int ROWS, const int COLS);
 void ReversePrint(float array_2[ROWS][COLS], const int ROWS, const int COLS);
@@ -46,6 +49,7 @@ double Sum(int array[], int size);
 double Sum(char array[], int size);
 double Sum(float array[], int size);
 double Sum(double array[], int size);
+
 double Sum(int array_2[ROWS][COLS], const int ROWS, const int COLS);
 double Sum(char array_2[ROWS][COLS], const int ROWS, const int COLS);
 double Sum(float array_2[ROWS][COLS], const int ROWS, const int COLS);
@@ -56,6 +60,7 @@ double Avg(int array[], int size);
 double Avg(char array[], int size);
 double Avg(float array[], int size);
 double Avg(double array[], int size);
+
 double Avg(int array_2[ROWS][COLS], const int ROWS, const int COLS);
 double Avg(char array_2[ROWS][COLS], const int ROWS, const int COLS);
 double Avg(float array_2[ROWS][COLS], const int ROWS, const int COLS);
@@ -66,15 +71,18 @@ double minValueIn(int array[], int size);
 double minValueIn(char array[], int size);
 double minValueIn(float array[], int size);
 double minValueIn(double array[], int size);
+
 double minValueIn(int array_2[ROWS][COLS], const int ROWS, const int COLS);
 double minValueIn(float array_2[ROWS][COLS], const int ROWS, const int COLS);
 double minValueIn(char array_2[ROWS][COLS], const int ROWS, const int COLS);
 double minValueIn(double array_2[ROWS][COLS], const int ROWS, const int COLS);
 
+
 double maxValueIn(int array[], int size);
 double maxValueIn(char array[], int size);
 double maxValueIn(float array[], int size);
 double maxValueIn(double array[], int size);
+
 double maxValueIn(int array_2[ROWS][COLS], const int ROWS, const int COLS);
 double maxValueIn(char array_2[ROWS][COLS], const int ROWS, const int COLS);
 double maxValueIn(float array_2[ROWS][COLS], const int ROWS, const int COLS);
@@ -85,6 +93,7 @@ void shiftLeft(int array[], int size, int sdvig);
 void shiftLeft(char array[], int size, int sdvig);
 void shiftLeft(float array[], int size, int sdvig);
 void shiftLeft(double array[], int size, int sdvig);
+
 void shiftLeft(int array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2);
 void shiftLeft(char array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2);
 void shiftLeft(float array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2);
@@ -95,6 +104,7 @@ void shiftRight(int array[], int size, int sdvig);
 void shiftRight(char array[], int size, int sdvig);
 void shiftRight(float array[], int size, int sdvig);
 void shiftRight(double array[], int size, int sdvig);
+
 void shiftRight(int array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3);
 void shiftRight(char array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3);
 void shiftRight(float array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3);
@@ -105,6 +115,7 @@ void SortMax(int array[], int size);
 void SortMax(char array[], int size);
 void SortMax(float array[], int size);
 void SortMax(double array[], int size);
+
 void SortMax(int array_2[ROWS][COLS], const int ROWS, const int COLS);
 void SortMax(char array_2[ROWS][COLS], const int ROWS, const int COLS);
 void SortMax(float array_2[ROWS][COLS], const int ROWS, const int COLS);
@@ -115,6 +126,7 @@ void SortMin(int array[], int size);
 void SortMin(char array[], int size);
 void SortMin(float array[], int size);
 void SortMin(double array[], int size);
+
 void SortMin(int array_2[ROWS][COLS], const int ROWS, const int COLS);
 void SortMin(char array_2[ROWS][COLS], const int ROWS, const int COLS);
 void SortMin(float array_2[ROWS][COLS], const int ROWS, const int COLS);
@@ -125,6 +137,7 @@ void UniqueRand(int array[], int size,int minRand_Unique=0,int maxRand_Unique=10
 void UniqueRand(char array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
 void UniqueRand(float array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
 void UniqueRand(double array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
+
 void UniqueRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique = 0, int maxRand_Unique = 100);
 void UniqueRand(char array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique = 0, int maxRand_Unique = 100);
 void UniqueRand(float array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique = 0, int maxRand_Unique = 100);
@@ -136,6 +149,10 @@ void Search(char array[], int size, int minRand_Search = 0, int maxRand_Search =
 void Search(float array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
 void Search(double array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
 
+void Search(int arr[ROWS][COLS], const int ROWS, const int COLS);
+void Search(char arr[ROWS][COLS], const int ROWS, const int COLS);
+void Search(float arr[ROWS][COLS], const int ROWS, const int COLS);
+void Search(double arr[ROWS][COLS], const int ROWS, const int COLS);
 
 int main()
 {
@@ -168,13 +185,15 @@ int main()
 	FillRand(array, razm, minRand_Fill, maxRand_Fill);
 
 
-
 	repchar('=', 88);
 	cout << setw(30)<< " Cформированный массив: ";
+
 	Print(array, razm);
 	cout << endl;
 	cout << setw(30) << " Обратный массив: ";
+
 	ReversePrint(array, razm);
+
 	cout << endl;
 	cout << setw(30) << " Сумма элементов массива: " << Sum(array, razm) << endl;
 	cout << endl;
@@ -187,26 +206,32 @@ int main()
 
 	SortMax(array, razm);
 	cout << setw(30) << "Сортировка по возрастанию: ";
+
 	Print(array, razm);
 	cout << endl;
 
 	SortMin(array, razm);
 	cout << setw(30) << "Сортировка по убыванию: ";
+
 	Print(array, razm);
 	cout << endl;
 
 	cout << setw(30) << "Введите число сдвига влево: ";
 	int sdvig;
 	cin >> sdvig;
+
 	shiftLeft(array, razm, sdvig);
 	cout <<"  Сдвинутый влево на " << sdvig << " элем.: ";
+
 	Print(array, razm);
 	cout << endl;
 
 	cout << setw(30) << "Введите число сдвига вправо: ";
 	cin >> sdvig;
+
 	shiftRight(array, razm, sdvig);
 	cout << " Сдвинутый вправо на " << sdvig << " элем.: ";
+
 	Print(array, razm);
 	cout << endl;
 
@@ -227,6 +252,7 @@ int main()
 
 	UniqueRand(array, razm, minRand_Unique, maxRand_Unique);
 	cout << setw(30) << "Сформированный массив из уникальных чисел: ";
+
 	Print(array, razm);
 	cout << endl;
 	
@@ -235,12 +261,14 @@ int main()
 	cout << OFFSET << "               Функция Search \n\n  ";
 	cout << OFFSET << "           Работа с повторяющимися числами \n\n  ";
 	cout << OFFSET << "========================================================\n\n\n";
+
 	int minRand_Search, maxRand_Search;
 	cout << setw(30) << "Введите диапазон для формирования массива " << razm << " элементов повторяющимися числами ОТ: ";
 	cin >> minRand_Search;
 	cout << setw(30) << "Введите диапазон для формирования массива " << razm << " элементов повторяющимися числами ДО: ";
 	cin >> maxRand_Search;
 	cout << endl;
+
 	while (maxRand_Search-minRand_Search >= razm)
 	{
 		cout << "В данном диапазоне не хватит цифр для повторения чисел" << endl;
@@ -279,12 +307,14 @@ int main()
 	int RAZM_COLS;
 	cin >> RAZM_COLS;
 	cout << endl;
+
 	while (RAZM_COLS > 100 || RAZM_COLS <= 0)
 	{
 		cout << " Количество столбцов может быть от 1 до 100!" << endl;
 		cout << " Введите снова: ";
 		cin >> RAZM_COLS;
 	}
+
 	cout << endl;
 	int array_2[ROWS][COLS];
 
@@ -300,6 +330,7 @@ int main()
 
 	FillRand(array_2, RAZM_ROWS, RAZM_COLS, minRand_Fill_2, maxRand_Fill_2);
 	cout << setw(30) << " Cформированный массив: " << endl;
+
 	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
 
@@ -323,27 +354,33 @@ int main()
 	
 	SortMax(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << setw(30) << "Сортировка по возрастанию: "<< endl;
+
 	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
 
 	SortMin(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << setw(30) << "Сортировка по убыванию: " << endl;
+
 	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
 
 	cout << setw(30) << "Введите число сдвига влево: ";
 	int sdvig_2;
 	cin >> sdvig_2;
+
 	shiftLeft(array_2, RAZM_ROWS, RAZM_COLS,sdvig_2);
 	cout << "  Сдвинутый влево на " << sdvig_2 << " элем.: " << endl;
+
 	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
 
 	cout << setw(30) << "Введите число сдвига вправо: ";
 	int sdvig_3;
 	cin >> sdvig_3;
+
 	shiftRight(array_2, RAZM_ROWS, RAZM_COLS, sdvig_3);
 	cout << " Сдвинутый вправо на " << sdvig_3 << " элем.: " << endl;
+
 	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
 
@@ -362,8 +399,30 @@ int main()
 
 	UniqueRand(array_2, RAZM_ROWS, RAZM_COLS, minRand_Unique_2, maxRand_Unique_2);
 	cout << setw(30) << "Сформированный массив из уникальных чисел: " << endl;
+
 	Print(array_2, RAZM_ROWS, RAZM_COLS);
 	cout << endl;
+
+	cout << OFFSET << "========================================================\n\n";
+	cout << OFFSET << "               Функция Search \n\n  ";
+	cout << OFFSET << "           Работа с повторяющимися числами \n\n  ";
+	cout << OFFSET << "========================================================\n\n\n";
+
+	int minRand_Fill_3, maxRand_Fill_3;
+	cout << setw(30) << "Введите диапазон массива для формирования массива из " << RAZM_ROWS * RAZM_COLS << " элементов ОТ: ";
+	cin >> minRand_Fill_3;
+	cout << endl;
+	cout << setw(30) << "Введите диапазон массива для формирования массива из " << RAZM_ROWS * RAZM_COLS << " элементов ДО: ";
+	cin >> maxRand_Fill_3;
+	cout << endl;
+
+	FillRand(array_2, RAZM_ROWS, RAZM_COLS, minRand_Fill_3, maxRand_Fill_3);
+	cout << setw(30) << " Cформированный массив: " << endl;
+
+	Print(array_2, RAZM_ROWS, RAZM_COLS);
+	cout << endl;
+
+	Search(array_2, RAZM_ROWS, RAZM_COLS);
 
 	cout << endl;
 	cout << endl;
@@ -554,6 +613,7 @@ void Print(double array_2[ROWS][COLS], const int ROWS, const int COLS)
 	cout << endl;
 
 }
+
 //---------------------------------------
 // ф-ции ReversePrint
 
@@ -1026,6 +1086,8 @@ void shiftLeft(int array[], int size, int sdvig)
 		array[size - 1] = temp;
 	}
 }
+
+
 void shiftLeft(char array[], int size, int sdvig)
 {
 	for (int i = 0; i < sdvig; i++)
@@ -1038,6 +1100,8 @@ void shiftLeft(char array[], int size, int sdvig)
 		array[size - 1] = temp;
 	}
 }
+
+
 void shiftLeft(float array[], int size, int sdvig)
 {
 	for (int i = 0; i < sdvig; i++)
@@ -1050,6 +1114,8 @@ void shiftLeft(float array[], int size, int sdvig)
 		array[size - 1] = temp;
 	}
 }
+
+
 void shiftLeft(double array[], int size, int sdvig)
 {
 	for (int i = 0; i < sdvig; i++)
@@ -1062,6 +1128,7 @@ void shiftLeft(double array[], int size, int sdvig)
 		array[size - 1] = temp;
 	}
 }
+
 
 void shiftLeft(int array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
 {
@@ -1085,6 +1152,7 @@ void shiftLeft(int array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvi
 	}
 }
 
+
 void shiftLeft(char array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
 {
 	for (int i = 0; i < sdvig_2; i++)
@@ -1106,6 +1174,7 @@ void shiftLeft(char array_2[ROWS][COLS], const int ROWS, const int COLS, int sdv
 		array_2[ROWS - 1][COLS - 1] = temp;
 	}
 }
+
 
 void shiftLeft(float array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
 {
@@ -1129,6 +1198,7 @@ void shiftLeft(float array_2[ROWS][COLS], const int ROWS, const int COLS, int sd
 	}
 }
 
+
 void shiftLeft(double array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
 {
 	for (int i = 0; i < sdvig_2; i++)
@@ -1150,43 +1220,52 @@ void shiftLeft(double array_2[ROWS][COLS], const int ROWS, const int COLS, int s
 		array_2[ROWS - 1][COLS - 1] = temp;
 	}
 }
+
 //---------------------------------------
 // ф-ции shiftRight
+
 
 void shiftRight(int array[], int size, int sdvig)
 {
 	shiftLeft(array, size, size-sdvig);
 }
 
+
 void shiftRight(char array[], int size, int sdvig)
 {
 	shiftLeft(array, size, size - sdvig);
 }
+
 
 void shiftRight(float array[], int size, int sdvig)
 {
 	shiftLeft(array, size, size - sdvig);
 }
 
+
 void shiftRight(double array[], int size, int sdvig)
 {
 	shiftLeft(array, size, size - sdvig);
 }
+
 
 void shiftRight(int array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
 {
 	shiftLeft(array_2, ROWS, COLS, ROWS*COLS-sdvig_3);
 }
 
+
 void shiftRight(char array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
 {
 	shiftLeft(array_2, ROWS, COLS, ROWS * COLS - sdvig_3);
 }
 
+
 void shiftRight(float array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
 {
 	shiftLeft(array_2, ROWS, COLS, ROWS * COLS - sdvig_3);
 }
+
 
 void shiftRight(double array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
 {
@@ -1213,6 +1292,8 @@ void SortMax(int array[], int size)
 	}
 }
 
+
+
 void SortMax(char array[], int size)
 {
 	for (int i = 0; i < size; i++)
@@ -1228,6 +1309,8 @@ void SortMax(char array[], int size)
 		}
 	}
 }
+
+
 
 void SortMax(float array[], int size)
 {
@@ -1245,6 +1328,8 @@ void SortMax(float array[], int size)
 	}
 }
 
+
+
 void SortMax(double array[], int size)
 {
 	for (int i = 0; i < size; i++)
@@ -1260,6 +1345,8 @@ void SortMax(double array[], int size)
 		}
 	}
 }
+
+
 
 void SortMax(int array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
@@ -1283,6 +1370,9 @@ void SortMax(int array_2[ROWS][COLS], const int ROWS, const int COLS)
 
 	}
 }
+
+
+
 void SortMax(char array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
@@ -1305,6 +1395,8 @@ void SortMax(char array_2[ROWS][COLS], const int ROWS, const int COLS)
 
 	}
 }
+
+
 
 void SortMax(float array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
@@ -1329,6 +1421,8 @@ void SortMax(float array_2[ROWS][COLS], const int ROWS, const int COLS)
 	}
 }
 
+
+
 void SortMax(double array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
@@ -1352,8 +1446,10 @@ void SortMax(double array_2[ROWS][COLS], const int ROWS, const int COLS)
 	}
 }
 
+
 //---------------------------------------
 // ф-ции SortMin
+
 
 void SortMin(int array[], int size)
 {
@@ -1422,6 +1518,7 @@ void SortMin(double array[], int size)
 	}
 }
 
+
 void SortMin(int array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
@@ -1444,6 +1541,8 @@ void SortMin(int array_2[ROWS][COLS], const int ROWS, const int COLS)
 
 	}
 }
+
+
 
 void SortMin(char array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
@@ -1468,6 +1567,8 @@ void SortMin(char array_2[ROWS][COLS], const int ROWS, const int COLS)
 	}
 }
 
+
+
 void SortMin(float array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
@@ -1491,6 +1592,8 @@ void SortMin(float array_2[ROWS][COLS], const int ROWS, const int COLS)
 	}
 }
 
+
+
 void SortMin(double array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
@@ -1513,6 +1616,7 @@ void SortMin(double array_2[ROWS][COLS], const int ROWS, const int COLS)
 
 	}
 }
+
 
 //---------------------------------------
 // ф-ции Uniquerand
@@ -1541,6 +1645,8 @@ void UniqueRand(int array[], int size, int minRand_Unique, int maxRand_Unique)
 	}
 }
 
+
+
 void UniqueRand(char array[], int size, int minRand_Unique, int maxRand_Unique)
 {
 	for (int i = 0; i < size; i++)
@@ -1564,6 +1670,7 @@ void UniqueRand(char array[], int size, int minRand_Unique, int maxRand_Unique)
 		} while (!unique);
 	}
 }
+
 
 
 void UniqueRand(float array[], int size, int minRand_Unique, int maxRand_Unique)
@@ -1591,6 +1698,7 @@ void UniqueRand(float array[], int size, int minRand_Unique, int maxRand_Unique)
 }
 
 
+
 void UniqueRand(double array[], int size, int minRand_Unique, int maxRand_Unique)
 {
 	for (int i = 0; i < size; i++)
@@ -1614,6 +1722,8 @@ void UniqueRand(double array[], int size, int minRand_Unique, int maxRand_Unique
 		} while (!unique);
 	}
 }
+
+
 
 void UniqueRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
 {
@@ -1646,6 +1756,8 @@ void UniqueRand(int array_2[ROWS][COLS], const int ROWS, const int COLS, int min
 	}
 }
 
+
+
 void UniqueRand(char array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
 {
 
@@ -1676,6 +1788,7 @@ void UniqueRand(char array_2[ROWS][COLS], const int ROWS, const int COLS, int mi
 
 	}
 }
+
 
 void UniqueRand(float array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
 {
@@ -1708,6 +1821,7 @@ void UniqueRand(float array_2[ROWS][COLS], const int ROWS, const int COLS, int m
 	}
 }
 
+
 void UniqueRand(double array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
 {
 
@@ -1739,8 +1853,10 @@ void UniqueRand(double array_2[ROWS][COLS], const int ROWS, const int COLS, int 
 	}
 }
 
+
 //---------------------------------------
 // ф-ции Search
+
 
 void Search(int array[], int razm, int minRand_Search, int maxRand_Search)
 
@@ -1800,6 +1916,8 @@ cout << endl;
 
 }
 
+
+
 void Search(char array[], int razm, int minRand_Search, int maxRand_Search)
 {
 	bool unique;
@@ -1854,6 +1972,8 @@ void Search(char array[], int razm, int minRand_Search, int maxRand_Search)
 
 
 }
+
+
 
 void Search(float array[], int razm, int minRand_Search, int maxRand_Search)
 
@@ -1913,6 +2033,8 @@ void Search(float array[], int razm, int minRand_Search, int maxRand_Search)
 
 }
 
+
+
 void Search(double array[], int razm, int minRand_Search, int maxRand_Search)
 
 
@@ -1968,6 +2090,146 @@ void Search(double array[], int razm, int minRand_Search, int maxRand_Search)
 	}
 	cout << endl;
 
+
+}
+
+
+
+void Search(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	cout << endl;
+	int povtor;
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int k = 0; k < COLS; k++)
+		{
+			povtor = 1;
+			for (int j = 0; j < ROWS; j++)
+			{
+				for (int l = 0; l < COLS; l++)
+				{
+					if (arr[i][k] == arr[j][l] && arr[i][k] != 0)
+					{
+						povtor++;
+						if (j != i || k != l)
+						{
+							arr[j][l] = 0;
+						}
+					}
+				}
+			}
+			if (povtor != 1)
+				cout << arr[i][k] << " повторяется " << povtor-1 << "раз(а)" << endl;
+			arr[i][k] = 0;
+		}
+
+
+	}
+
+}
+
+
+
+void Search(char arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	cout << endl;
+	int povtor;
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int k = 0; k < COLS; k++)
+		{
+			povtor = 1;
+			for (int j = 0; j < ROWS; j++)
+			{
+				for (int l = 0; l < COLS; l++)
+				{
+					if (arr[i][k] == arr[j][l] && arr[i][k] != 0)
+					{
+						povtor++;
+						if (j != i || k != l)
+						{
+							arr[j][l] = 0;
+						}
+					}
+				}
+			}
+			if (povtor != 1)
+				cout << arr[i][k] << " повторяется " << povtor - 1 << "раз(а)" << endl;
+			arr[i][k] = 0;
+		}
+
+
+	}
+
+}
+
+
+
+void Search(float arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	cout << endl;
+	int povtor;
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int k = 0; k < COLS; k++)
+		{
+			povtor = 1;
+			for (int j = 0; j < ROWS; j++)
+			{
+				for (int l = 0; l < COLS; l++)
+				{
+					if (arr[i][k] == arr[j][l] && arr[i][k] != 0)
+					{
+						povtor++;
+						if (j != i || k != l)
+						{
+							arr[j][l] = 0;
+						}
+					}
+				}
+			}
+			if (povtor != 1)
+				cout << arr[i][k] << " повторяется " << povtor - 1 << "раз(а)" << endl;
+			arr[i][k] = 0;
+		}
+
+
+	}
+
+}
+
+
+
+void Search(double arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	cout << endl;
+	int povtor;
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int k = 0; k < COLS; k++)
+		{
+			povtor = 1;
+			for (int j = 0; j < ROWS; j++)
+			{
+				for (int l = 0; l < COLS; l++)
+				{
+					if (arr[i][k] == arr[j][l] && arr[i][k] != 0)
+					{
+						povtor++;
+						if (j != i || k != l)
+						{
+							arr[j][l] = 0;
+						}
+					}
+				}
+			}
+			if (povtor != 1)
+				cout << arr[i][k] << " повторяется " << povtor - 1 << "раз(а)" << endl;
+			arr[i][k] = 0;
+		}
+
+
+	}
 
 }
 
