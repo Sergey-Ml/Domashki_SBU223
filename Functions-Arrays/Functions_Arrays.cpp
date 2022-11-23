@@ -1,6 +1,4 @@
 ﻿
-/// Это просто праздник какой-то, а не домашка!!!!!!
-
 
 #include<iostream>
 #include<iomanip>
