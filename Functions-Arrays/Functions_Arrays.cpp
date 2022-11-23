@@ -1,5 +1,4 @@
 ﻿
-
 #include<iostream>
 #include<iomanip>
 using namespace std;
@@ -9,94 +8,57 @@ const int ROWS = 100;
 const int COLS = 100;
 void repchar (char, int); // оформление
 
-template<typename T>
-void FillRand (T array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
+template<typename T>void FillRand (T array[], int size, int minRand_Fill=0, int maxRand_Fill=100);
 
-template<typename T>
-void FillRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
+template<typename T>void FillRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 
-template<typename T>
-void Print (T array[], int size);
+template<typename T>void Print (T array[], int size);
 
-template<typename T>
-void Print(T array_2[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>void Print(T array_2[ROWS][COLS], const int ROWS, const int COLS);
 
+template<typename T>void ReversePrint(T array[], int size);
 
-template<typename T>
-void ReversePrint(T array[], int size);
+template<typename T>void ReversePrint(T array_2[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-void ReversePrint(T array_2[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>T Sum(T array[], int size);
 
+template<typename T>T Sum(T array_2[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-T Sum(T array[], int size);
+template<typename T>double Avg(T array[], int size);
 
+template<typename T>double Avg(T array_2[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-T Sum(T array_2[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>T minValueIn(T array[], int size);
 
+template<typename T>T minValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-double Avg(T array[], int size);
+template<typename T>T maxValueIn(T array[], int size);
 
-template<typename T>
-double Avg(T array_2[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>T maxValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS);
 
+template<typename T>void shiftLeft(T array[], int size, int sdvig);
 
-template<typename T>
-T minValueIn(T array[], int size);
+template<typename T>void shiftLeft(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2);
 
-template<typename T>
-T minValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>void shiftRight(T array[], int size, int sdvig);
 
-template<typename T>
-T maxValueIn(T array[], int size);
+template<typename T>void shiftRight(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3);
 
+template<typename T>void SortMax(T array[], int size);
 
-template<typename T>
-T maxValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>void SortMax(T array_2[ROWS][COLS], const int ROWS, const int COLS);
 
+template<typename T>void SortMin(T array[], int size);
 
-template<typename T>
-void shiftLeft(T array[], int size, int sdvig);
+template<typename T>void SortMin(T array_2[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-void shiftLeft(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2);
+template<typename T>void UniqueRand(T array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
 
+template<typename T>void UniqueRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique = 0, int maxRand_Unique = 100);
 
-template<typename T>
-void shiftRight(T array[], int size, int sdvig);
+template<typename T>void Search(T array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
 
-template<typename T>
-void shiftRight(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3);
-
-
-template<typename T>
-void SortMax(T array[], int size);
-
-
-template<typename T>
-void SortMax(T array_2[ROWS][COLS], const int ROWS, const int COLS);
-
-template<typename T>
-void SortMin(T array[], int size);
-
-template<typename T>
-void SortMin(T array_2[ROWS][COLS], const int ROWS, const int COLS);
-
-template<typename T>
-void UniqueRand(T array[], int size,int minRand_Unique=0,int maxRand_Unique=100);
-
-template<typename T>
-void UniqueRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique = 0, int maxRand_Unique = 100);
-
-
-template<typename T>
-void Search(T array[], int size, int minRand_Search = 0, int maxRand_Search = 100);
-
-template<typename T>
-void Search(T arr[ROWS][COLS], const int ROWS, const int COLS);
+template<typename T>void Search(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
 int main()
 {
@@ -388,8 +350,7 @@ void repchar(char simvol, int n)
 // --------------------------------------
 
 // ф-ции FillRand
-template<typename T>
-void FillRand(T array[], int size,int minRand_Fill, int maxRand_Fill)
+template<typename T>void FillRand(T array[], int size,int minRand_Fill, int maxRand_Fill)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -398,8 +359,7 @@ void FillRand(T array[], int size,int minRand_Fill, int maxRand_Fill)
 
 }
 
-template<typename T>
-void FillRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Fill, int maxRand_Fill)
+template<typename T>void FillRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Fill, int maxRand_Fill)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -412,8 +372,7 @@ void FillRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand
 //---------------------------------------
 // ф-ции Print
 
-template<typename T>
-void Print(T array[], int size)
+template<typename T>void Print(T array[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -423,8 +382,7 @@ void Print(T array[], int size)
 
 }
 
-template<typename T>
-void Print(T array_2[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>void Print(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -439,8 +397,7 @@ void Print(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 
 //---------------------------------------
 // ф-ции ReversePrint
-template<typename T>
-void ReversePrint(T array[], int size)
+template<typename T>void ReversePrint(T array[], int size)
 {
 	for (int i = size - 1; i >= 0; i--)
 	{
@@ -449,8 +406,7 @@ void ReversePrint(T array[], int size)
 	cout << endl;
 
 }
-template<typename T>
-void ReversePrint(T array_2[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>void ReversePrint(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 
 	for (int i = ROWS - 1; i >= 0; i--)
@@ -469,8 +425,7 @@ void ReversePrint(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 //---------------------------------------
 // ф-ции Sum
 
-template<typename T>
-T Sum(T array[], int size)
+template<typename T>T Sum(T array[], int size)
 {
 	double summa = 0;
 	for (int i = 0; i < size; i++)
@@ -481,9 +436,7 @@ T Sum(T array[], int size)
 	return summa;
 }
 
-template<typename T>
-
-T Sum(T array_2[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>T Sum(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	double summa = 0;
 	for (int i = 0; i < ROWS; i++)
@@ -501,15 +454,13 @@ T Sum(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 //---------------------------------------
 // ф-ции Avg
 
-template<typename T>
-double Avg(T array[], int size)
+template<typename T>double Avg(T array[], int size)
 {
 	return (double)Sum(array, size) / size;
 }
 
 
-template<typename T>
-double Avg(T array_2[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>double Avg(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	return (double)Sum(array_2, ROWS, COLS) / (ROWS*COLS);
 }
@@ -518,8 +469,7 @@ double Avg(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 // ф-ции minValueIn
 
 
-template<typename T>
-T minValueIn(T array[], int size)
+template<typename T>T minValueIn(T array[], int size)
 {
 	double min = array[0];
 	for (int i = 0; i < size; i++)
@@ -530,8 +480,7 @@ T minValueIn(T array[], int size)
 	return min;
 }
 
-template<typename T>
-T minValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>T minValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	double min = array_2[0][0];
 	for (int i = 0; i < ROWS; i++)
@@ -546,8 +495,7 @@ T minValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 }
 
 
-template<typename T>
-T maxValueIn(T array[], int size)
+template<typename T>T maxValueIn(T array[], int size)
 {
 	double max = array[0];
 	for (int i = 0; i < size; i++)
@@ -557,9 +505,7 @@ T maxValueIn(T array[], int size)
 	}
 	return max;
 }
-template<typename T>
-
-T maxValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>T maxValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	double max = array_2[0][0];
 	for (int i = 0; i < ROWS; i++)
@@ -574,8 +520,7 @@ T maxValueIn(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 //---------------------------------------
 // ф-ции shiftLeft
 
-template<typename T>
-void shiftLeft(T array[], int size, int sdvig)
+template<typename T>void shiftLeft(T array[], int size, int sdvig)
 {
 	for (int i = 0; i < sdvig; i++)
 	{
@@ -588,8 +533,7 @@ void shiftLeft(T array[], int size, int sdvig)
 	}
 }
 
-template<typename T>
-void shiftLeft(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
+template<typename T>void shiftLeft(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_2)
 {
 	for (int i = 0; i < sdvig_2; i++)
 	{
@@ -614,14 +558,12 @@ void shiftLeft(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_
 //---------------------------------------
 // ф-ции shiftRight
 
-template<typename T>
-void shiftRight(T array[], int size, int sdvig)
+template<typename T>void shiftRight(T array[], int size, int sdvig)
 {
 	shiftLeft(array, size, size-sdvig);
 }
 
-template<typename T>
-void shiftRight(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
+template<typename T>void shiftRight(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig_3)
 {
 	shiftLeft(array_2, ROWS, COLS, ROWS*COLS-sdvig_3);
 }
@@ -630,8 +572,7 @@ void shiftRight(T array_2[ROWS][COLS], const int ROWS, const int COLS, int sdvig
 //---------------------------------------
 // ф-ции SortMax
 
-template<typename T>
-void SortMax(T array[], int size)
+template<typename T>void SortMax(T array[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -639,7 +580,7 @@ void SortMax(T array[], int size)
 		{
 			if (array[j] < array[i])
 			{
-				double temp = array[i];
+				T temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -648,8 +589,7 @@ void SortMax(T array[], int size)
 }
 
 
-template<typename T>
-void SortMax(T array_2[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>void SortMax(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -675,8 +615,7 @@ void SortMax(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 //---------------------------------------
 // ф-ции SortMin
 
-template<typename T>
-void SortMin(T array[], int size)
+template<typename T>void SortMin(T array[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -684,7 +623,7 @@ void SortMin(T array[], int size)
 		{
 			if (array[j] > array[i])
 			{
-				double temp = array[i];
+				T temp = array[i];
 				array[i] = array[j];
 				array[j] = temp;
 			}
@@ -692,8 +631,7 @@ void SortMin(T array[], int size)
 	}
 }
 
-template<typename T>
-void SortMin(T array_2[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>void SortMin(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -720,8 +658,7 @@ void SortMin(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 //---------------------------------------
 // ф-ции Uniquerand
 
-template<typename T>
-void UniqueRand(T array[], int size, int minRand_Unique, int maxRand_Unique)
+template<typename T>void UniqueRand(T array[], int size, int minRand_Unique, int maxRand_Unique)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -746,8 +683,7 @@ void UniqueRand(T array[], int size, int minRand_Unique, int maxRand_Unique)
 }
 
 
-template<typename T>
-void UniqueRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
+template<typename T>void UniqueRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRand_Unique, int maxRand_Unique)
 {
 
 	for (int i = 0; i < ROWS; i++)
@@ -782,10 +718,7 @@ void UniqueRand(T array_2[ROWS][COLS], const int ROWS, const int COLS, int minRa
 //---------------------------------------
 // ф-ции Search
 
-template<typename T>
-void Search(T array[], int razm, int minRand_Search, int maxRand_Search)
-
-
+template<typename T>void Search(T array[], int razm, int minRand_Search, int maxRand_Search)
 {
 
 bool unique;
@@ -841,8 +774,7 @@ cout << endl;
 
 }
 
-template<typename T>
-void Search(T arr[ROWS][COLS], const int ROWS, const int COLS)
+template<typename T>void Search(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	cout << endl;
 	int povtor;
