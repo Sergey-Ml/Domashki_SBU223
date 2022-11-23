@@ -1,5 +1,5 @@
-#include"Sort.h"
-// ф-ции SortMax
+п»ї#include"Sort.h"
+// С„-С†РёРё SortMax
 
 template<typename T>void SortMax(T array[], int size)
 {
@@ -26,10 +26,10 @@ template<typename T>void SortMax(T array_2[ROWS][COLS], const int ROWS, const in
 		{
 			for (int k = i; k < ROWS; k++)
 			{
-				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //СѓРјРµРЅСЊС€Р°РµРј РєРѕР»-РІРѕ РёС‚РµСЂР°С†РёР№
 				{
-					//array_2[i][j] -  выбранный элемент
-					//array_2[k][l] -  перебираемый элемент
+					//array_2[i][j] -  РІС‹Р±СЂР°РЅРЅС‹Р№ СЌР»РµРјРµРЅС‚
+					//array_2[k][l] -  РїРµСЂРµР±РёСЂР°РµРјС‹Р№ СЌР»РµРјРµРЅС‚
 					if (array_2[k][l] < array_2[i][j])
 					{
 						swap(array_2[i][j], array_2[k][l]);
@@ -42,7 +42,7 @@ template<typename T>void SortMax(T array_2[ROWS][COLS], const int ROWS, const in
 }
 
 //---------------------------------------
-// ф-ции SortMin
+// С„-С†РёРё SortMin
 
 template<typename T>void SortMin(T array[], int size)
 {
@@ -68,10 +68,10 @@ template<typename T>void SortMin(T array_2[ROWS][COLS], const int ROWS, const in
 		{
 			for (int k = i; k < ROWS; k++)
 			{
-				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //уменьшаем кол-во итераций
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++) //СѓРјРµРЅСЊС€Р°РµРј РєРѕР»-РІРѕ РёС‚РµСЂР°С†РёР№
 				{
-					//array_2[i][j] -  выбранный элемент
-					//array_2[k][l] -  перебираемый элемент
+					//array_2[i][j] -  РІС‹Р±СЂР°РЅРЅС‹Р№ СЌР»РµРјРµРЅС‚
+					//array_2[k][l] -  РїРµСЂРµР±РёСЂР°РµРјС‹Р№ СЌР»РµРјРµРЅС‚
 					if (array_2[k][l] > array_2[i][j])
 					{
 						swap(array_2[i][j], array_2[k][l]);

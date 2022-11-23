@@ -1,7 +1,7 @@
-#include"FillRand.h"
+п»ї#include"FillRand.h"
 
 
-// ф-ции FillRand
+// С„-С†РёРё FillRand
 
 
 void FillRand(int array[], int size, int minRand_Fill, int maxRand_Fill)

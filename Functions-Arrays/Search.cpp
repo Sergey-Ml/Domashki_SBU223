@@ -1,5 +1,5 @@
-#include"Search.h"
-// ф-ции Search
+п»ї#include"Search.h"
+// С„-С†РёРё Search
 
 template<typename T>void Search(T array[], int razm, int minRand_Search, int maxRand_Search)
 {
@@ -33,9 +33,9 @@ template<typename T>void Search(T array[], int razm, int minRand_Search, int max
 
 	}
 	cout << endl;
-	cout << "Количество повторений: " << povtor << endl;
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРІС‚РѕСЂРµРЅРёР№: " << povtor << endl;
 	cout << endl;
-	cout << "Повторяющиеся элементы: ";
+	cout << "РџРѕРІС‚РѕСЂСЏСЋС‰РёРµСЃСЏ СЌР»РµРјРµРЅС‚С‹: ";
 
 	for (int i = 0; i < razm; i++)
 	{
@@ -81,7 +81,7 @@ template<typename T>void Search(T arr[ROWS][COLS], const int ROWS, const int COL
 				}
 			}
 			if (povtor != 1)
-				cout << arr[i][k] << " повторяется " << povtor - 1 << "раз(а)" << endl;
+				cout << arr[i][k] << " РїРѕРІС‚РѕСЂСЏРµС‚СЃСЏ " << povtor - 1 << "СЂР°Р·(Р°)" << endl;
 			arr[i][k] = 0;
 		}
 

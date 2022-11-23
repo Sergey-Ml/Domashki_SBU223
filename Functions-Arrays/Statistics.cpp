@@ -1,5 +1,5 @@
-#include"Statistics.h"
-// ô-öèè Sum
+ï»¿#include"Statistics.h"
+// Ñ„-Ñ†Ð¸Ð¸ Sum
 
 template<typename T>T Sum(T array[], int size)
 {
@@ -8,7 +8,7 @@ template<typename T>T Sum(T array[], int size)
 	{
 		summa += array[i];
 	}
-	//cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << summa;
+	//cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << summa;
 	return summa;
 }
 
@@ -22,13 +22,13 @@ template<typename T>T Sum(T array_2[ROWS][COLS], const int ROWS, const int COLS)
 			summa += array_2[i][j];
 		}
 	}
-	//cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << summa;
+	//cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << summa;
 	return summa;
 }
 
 
 //---------------------------------------
-// ô-öèè Avg
+// Ñ„-Ñ†Ð¸Ð¸ Avg
 
 template<typename T>double Avg(T array[], int size)
 {
@@ -42,7 +42,7 @@ template<typename T>double Avg(T array_2[ROWS][COLS], const int ROWS, const int 
 }
 
 //---------------------------------------
-// ô-öèè minValueIn
+// Ñ„-Ñ†Ð¸Ð¸ minValueIn
 
 
 template<typename T>T minValueIn(T array[], int size)

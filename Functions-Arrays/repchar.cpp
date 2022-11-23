@@ -1,6 +1,6 @@
-#include"repchar.h"
+п»ї#include"repchar.h"
 #include"stdafx.h"
-// ф-ция repchar
+// С„-С†РёСЏ repchar
 void repchar(char simvol, int n)
 {
 	for (int i = 0; i < n; i++)

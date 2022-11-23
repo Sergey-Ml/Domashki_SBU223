@@ -1,6 +1,6 @@
-#include"Print_ReversePrint.h"
+п»ї#include"Print_ReversePrint.h"
 
-// ф-ции Print
+// С„-С†РёРё Print
 
 template<typename T>void Print(T array[], int size)
 {
@@ -23,7 +23,7 @@ template<typename T>void Print(T array_2[ROWS][COLS], const int ROWS, const int 
 	cout << endl;
 
 }
-// ф-ции ReversePrint
+// С„-С†РёРё ReversePrint
 template<typename T>void ReversePrint(T array[], int size)
 {
 	for (int i = size - 1; i >= 0; i--)

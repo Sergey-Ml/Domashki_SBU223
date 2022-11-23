@@ -1,5 +1,5 @@
-#include"Shift.h"
-// ф-ции shiftLeft
+п»ї#include"Shift.h"
+// С„-С†РёРё shiftLeft
 
 template<typename T>void shiftLeft(T array[], int size, int sdvig)
 {
@@ -37,7 +37,7 @@ template<typename T>void shiftLeft(T array_2[ROWS][COLS], const int ROWS, const 
 }
 
 //---------------------------------------
-// ф-ции shiftRight
+// С„-С†РёРё shiftRight
 
 template<typename T>void shiftRight(T array[], int size, int sdvig)
 {
